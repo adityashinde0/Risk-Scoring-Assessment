@@ -60,6 +60,19 @@ def get_latest_assessment():
     return _latest_assessment
 
 
+@app.get("/api/assessment/entities/{entity_id}")
+def get_entity_assessment(entity_id: str):
+    global _latest_assessment
+    if _latest_assessment is None:
+        get_latest_assessment()
+
+    for entity in _latest_assessment.entities:
+        if entity.entity_id == entity_id:
+            return entity
+
+    raise HTTPException(status_code=404, detail=f"Entity '{entity_id}' not found in current assessment run.")
+
+
 @app.post("/api/assessment/run", response_model=AssessmentOutput)
 def trigger_assessment(req: RunAssessmentRequest):
     global _latest_assessment

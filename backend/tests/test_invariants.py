@@ -1,9 +1,11 @@
 """Comprehensive automated invariant and robustness tests for P-006 Risk Scoring Assessment."""
 
 import sys
+import tempfile
 from pathlib import Path
 import pytest
 import pandas as pd
+from fastapi.testclient import TestClient
 
 # Add backend directory to sys.path
 backend_dir = Path(__file__).resolve().parent.parent
@@ -14,11 +16,17 @@ from src.pipeline import run_assessment_pipeline
 from src.risk_normalizer import calculate_normalized_risk_score
 from src.baseline import generate_random_baseline
 from src.schema import RawSecurityEvent, QuarantinedRow, AssessmentOutput
+from src.api.server import app
 
 
 @pytest.fixture
 def sample_events_path():
     return backend_dir / "data" / "security_events.json"
+
+
+@pytest.fixture
+def sample_csv_path():
+    return backend_dir / "data" / "security_events.csv"
 
 
 def test_invariant_1_score_bounds_and_validity(sample_events_path):
@@ -159,3 +167,46 @@ def test_empty_dataset_graceful_handling():
     assert result.total_entities_evaluated == 0
     assert len(result.entities) == 0
     assert result.model_status == "FALLBACK_RULE_ONLY"
+
+
+def test_csv_ingestion_and_metadata_parsing(sample_csv_path):
+    """Test CSV ingestion preserves JSON string metadata into dictionary."""
+    valid_df, val_summary = load_and_ingest_file(sample_csv_path)
+    assert not valid_df.empty
+    assert val_summary.valid_rows_count > 0
+    # Check that metadata is a dict
+    for meta in valid_df["metadata"]:
+        assert isinstance(meta, dict)
+
+
+def test_empty_csv_file_graceful_handling():
+    """Test loading an empty CSV file does not crash."""
+    with tempfile.NamedTemporaryFile(suffix=".csv", mode="w", delete=False) as f:
+        f.write("")
+        temp_path = f.name
+
+    try:
+        valid_df, val_summary = load_and_ingest_file(temp_path)
+        assert valid_df.empty
+        assert val_summary.valid_rows_count == 0
+    finally:
+        Path(temp_path).unlink(missing_ok=True)
+
+
+def test_api_entity_endpoint():
+    """Test FastAPI /api/assessment/entities/{entity_id} endpoint."""
+    client = TestClient(app)
+    # Get latest
+    latest_res = client.get("/api/assessment/latest")
+    assert latest_res.status_code == 200
+    latest_data = latest_res.json()
+    assert len(latest_data["entities"]) > 0
+
+    first_entity_id = latest_data["entities"][0]["entity_id"]
+    entity_res = client.get(f"/api/assessment/entities/{first_entity_id}")
+    assert entity_res.status_code == 200
+    assert entity_res.json()["entity_id"] == first_entity_id
+
+    # Test non-existent entity
+    not_found_res = client.get("/api/assessment/entities/NON_EXISTENT_ENTITY_999")
+    assert not_found_res.status_code == 404

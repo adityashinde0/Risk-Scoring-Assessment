@@ -44,6 +44,17 @@ def _validate_single_event(raw_dict: Dict[str, Any], index: int) -> Tuple[Option
     except (ValueError, TypeError):
         bytes_float = 0.0
 
+    # Handle metadata parsing if string or dict
+    meta_raw = raw_dict.get("metadata")
+    parsed_meta: Dict[str, Any] = {}
+    if isinstance(meta_raw, dict):
+        parsed_meta = meta_raw
+    elif isinstance(meta_raw, str) and meta_raw.strip().startswith("{") and meta_raw.strip().endswith("}"):
+        try:
+            parsed_meta = json.loads(meta_raw)
+        except Exception:
+            parsed_meta = {}
+
     try:
         event = RawSecurityEvent(
             event_id=str(raw_dict["event_id"]).strip(),
@@ -56,7 +67,7 @@ def _validate_single_event(raw_dict: Dict[str, Any], index: int) -> Tuple[Option
             resource=str(raw_dict.get("resource", "")).strip() or None,
             bytes_transferred=bytes_float,
             severity=str(raw_dict.get("severity", "info")).strip() or "info",
-            metadata=raw_dict.get("metadata") if isinstance(raw_dict.get("metadata"), dict) else {},
+            metadata=parsed_meta,
         )
         return event, None
     except Exception as ex:
@@ -117,8 +128,11 @@ def load_and_ingest_file(file_path: Union[str, Path]) -> Tuple[pd.DataFrame, Val
             else:
                 raise ValueError("JSON file must be a list of events or an object with an 'events' list")
     elif suffix in [".csv", ".tsv"]:
-        raw_df = pd.read_csv(path, dtype=str)
-        records = raw_df.to_dict(orient="records")
+        try:
+            raw_df = pd.read_csv(path, dtype=str)
+            records = raw_df.to_dict(orient="records")
+        except pd.errors.EmptyDataError:
+            records = []
     else:
         raise ValueError(f"Unsupported file format: {suffix}. Expected .csv, .tsv, or .json")
 
