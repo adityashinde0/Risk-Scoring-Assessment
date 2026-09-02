@@ -31,7 +31,8 @@ def generate_security_dataset(
         "judy", "kevin", "laura", "mike", "nina", "oscar", "peggy", "quinn"
     ][:num_normal_users]]
 
-    all_entities = normal_users + ["user_jdoe", "admin_mscott", "dev_alice", "service_backup"]
+    # Include normal staff, benign-unusual on-call engineer, and 4 specific threat scenarios
+    all_entities = normal_users + ["user_oncall_nate", "user_jdoe", "admin_mscott", "dev_alice", "service_backup"]
 
     # =========================================================================
     # Window 1: Baseline Routine Activity for ALL Entities (Low Risk Baseline)
@@ -81,6 +82,23 @@ def generate_security_dataset(
                 "severity": "info",
                 "metadata": {"dept": "marketing", "workstation": f"WS-{user}"},
             })
+
+    # 1.1 Benign-Unusual User (On-Call Engineer: odd-hour logins and moderate data, but zero malicious triggers)
+    for i in range(4):
+        event_time = base_time_w2 + timedelta(hours=14, minutes=i * 25)  # 22:00 PM
+        w2_events.append({
+            "event_id": f"EVT-W2-ONCALL-nate-{i:03d}",
+            "timestamp": event_time.isoformat(),
+            "entity_id": "user_oncall_nate",
+            "entity_type": "user",
+            "event_type": "file_access" if i > 0 else "login",
+            "outcome": "success",
+            "source_ip": "10.0.1.99" if i % 2 == 0 else "10.0.1.100",
+            "resource": "/infra/configs/router_backup.cfg",
+            "bytes_transferred": 2 * 1024 * 1024,  # 2 MB
+            "severity": "info",
+            "metadata": {"ticket": "INC-8831-MAINTENANCE", "dept": "devops"},
+        })
 
     # 2. Threat 1: user_jdoe (Brute-Force Auth Failures + Off-Hours Access)
     for i in range(6):

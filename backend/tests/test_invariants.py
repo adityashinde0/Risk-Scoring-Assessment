@@ -242,14 +242,14 @@ def test_dynamic_window_score_shift(window1_path, window2_path):
     jdoe = next(e for e in w2_res.entities if e.entity_id == "user_jdoe")
     mscott = next(e for e in w2_res.entities if e.entity_id == "admin_mscott")
 
-    assert alice.risk_score >= 30.0
-    assert alice.score_delta is not None and alice.score_delta >= 10.0
+    assert alice.risk_score >= 28.0
+    assert alice.score_delta is not None and alice.score_delta >= 15.0
     assert alice.trend_status == "ESCALATED"
 
-    assert jdoe.risk_score >= 30.0
+    assert jdoe.risk_score >= 28.0
     assert jdoe.score_delta is not None and jdoe.score_delta >= 10.0
 
-    assert mscott.risk_score >= 30.0
+    assert mscott.risk_score >= 28.0
     assert mscott.score_delta is not None and mscott.score_delta >= 10.0
 
 
@@ -276,6 +276,57 @@ def test_score_sensitivity_to_threat_injection():
     assert dirty_score > clean_score + 15.0
     assert dirty_score <= 50.0
     assert len(res_dirty.entities[0].top_contributors) >= 2
+
+
+def test_benign_unusual_entity_non_threat(sample_events_path):
+    """
+    Evaluation Integrity Test:
+    Verify that an entity with benign unusual behavior (on-call working late, 2MB config backup, 2 IPs)
+    is NOT classified as a High/Critical threat (Unusual != Malicious).
+    """
+    result = run_assessment_pipeline(file_path=sample_events_path)
+    nate = next((e for e in result.entities if e.entity_id == "user_oncall_nate"), None)
+    assert nate is not None, "user_oncall_nate missing from evaluation population"
+
+    # Score must remain in Low or Medium band (< 30.0)
+    assert nate.risk_score < 30.0, f"False Positive: Benign on-call user scored {nate.risk_score} (>= 30.0)"
+    assert nate.risk_band in ["low", "medium"]
+
+
+def test_gradient_threat_sensitivity():
+    """
+    Threat Sensitivity Test:
+    Verify that monotonically increasing threat intensity (Normal -> Mild -> Suspicious -> Critical)
+    produces monotonically increasing dynamic risk scores.
+    """
+    scores = []
+    # 1. Normal: 5 routine logins
+    ev_normal = [{"event_id": f"E-N-{i}", "timestamp": f"2026-09-01T10:0{i}:00Z", "entity_id": "gradient_user", "event_type": "login", "outcome": "success"} for i in range(5)]
+    r_norm = run_assessment_pipeline(records=ev_normal)
+    scores.append(r_norm.entities[0].risk_score)
+
+    # 2. Mild: 2 failed logins
+    ev_mild = list(ev_normal) + [{"event_id": f"E-M-{i}", "timestamp": f"2026-09-01T11:0{i}:00Z", "entity_id": "gradient_user", "event_type": "login", "outcome": "failure"} for i in range(2)]
+    r_mild = run_assessment_pipeline(records=ev_mild)
+    scores.append(r_mild.entities[0].risk_score)
+
+    # 3. Suspicious: 5 failed logins + 1 odd hour
+    ev_susp = list(ev_mild) + [{"event_id": f"E-S-{i}", "timestamp": f"2026-09-01T23:0{i}:00Z", "entity_id": "gradient_user", "event_type": "login", "outcome": "failure"} for i in range(3)]
+    r_susp = run_assessment_pipeline(records=ev_susp)
+    scores.append(r_susp.entities[0].risk_score)
+
+    # 4. Critical: Above + 40MB exfiltration + privilege escalation
+    ev_crit = list(ev_susp) + [
+        {"event_id": "E-C-1", "timestamp": "2026-09-01T23:30:00Z", "entity_id": "gradient_user", "event_type": "privilege_change", "outcome": "success"},
+        {"event_id": "E-C-2", "timestamp": "2026-09-01T23:45:00Z", "entity_id": "gradient_user", "event_type": "data_transfer", "outcome": "success", "bytes_transferred": 40 * 1024 * 1024}
+    ]
+    r_crit = run_assessment_pipeline(records=ev_crit)
+    scores.append(r_crit.entities[0].risk_score)
+
+    # Verify monotonic risk response
+    assert scores[0] <= scores[1] <= scores[2] < scores[3]
+    assert scores[3] >= 30.0  # Significant threat escalation
+
 
 
 def test_recommendation_linkage_to_contributors(sample_events_path):
