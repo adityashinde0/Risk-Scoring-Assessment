@@ -11,6 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response, StreamingResponse
 from pydantic import BaseModel
 
+from ..evaluation import BenchmarkEvaluationReport, evaluate_assessment_methods
 from ..pipeline import export_assessment_to_files, run_assessment_pipeline
 from ..schema import AssessmentOutput
 
@@ -31,6 +32,8 @@ app.add_middleware(
 
 DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
 DEFAULT_DATA_FILE = DATA_DIR / "security_events.json"
+WINDOW1_DATA_FILE = DATA_DIR / "security_events_window1_baseline.json"
+WINDOW2_DATA_FILE = DATA_DIR / "security_events_window2_threats.json"
 
 # In-memory cached latest assessment
 _latest_assessment: Optional[AssessmentOutput] = None
@@ -42,6 +45,7 @@ class RunAssessmentRequest(BaseModel):
     random_seed: int = 42
     baseline_review_rate: float = 0.25
     contamination: float = 0.15
+    window: Optional[str] = "window_2_threats"  # window_1_baseline, window_2_threats
 
 
 @app.get("/api/health")
@@ -53,10 +57,14 @@ def health_check():
 def get_latest_assessment():
     global _latest_assessment
     if _latest_assessment is None:
-        if not DEFAULT_DATA_FILE.exists():
+        if not DEFAULT_DATA_FILE.exists() or not WINDOW1_DATA_FILE.exists():
             from ..data.generate_demo_data import generate_security_dataset
             generate_security_dataset(DATA_DIR)
-        _latest_assessment = run_assessment_pipeline(file_path=DEFAULT_DATA_FILE)
+        _latest_assessment = run_assessment_pipeline(
+            file_path=DEFAULT_DATA_FILE,
+            window_id="window_2_threats",
+            baseline_history_file=WINDOW1_DATA_FILE,
+        )
     return _latest_assessment
 
 
@@ -73,20 +81,40 @@ def get_entity_assessment(entity_id: str):
     raise HTTPException(status_code=404, detail=f"Entity '{entity_id}' not found in current assessment run.")
 
 
+@app.get("/api/assessment/evaluation", response_model=BenchmarkEvaluationReport)
+def get_evaluation_benchmark():
+    global _latest_assessment
+    if _latest_assessment is None:
+        get_latest_assessment()
+
+    return evaluate_assessment_methods(_latest_assessment)
+
+
 @app.post("/api/assessment/run", response_model=AssessmentOutput)
 def trigger_assessment(req: RunAssessmentRequest):
     global _latest_assessment
-    if not DEFAULT_DATA_FILE.exists():
+    if not DEFAULT_DATA_FILE.exists() or not WINDOW1_DATA_FILE.exists():
         from ..data.generate_demo_data import generate_security_dataset
         generate_security_dataset(DATA_DIR)
 
+    if req.window == "window_1_baseline":
+        file_to_run = WINDOW1_DATA_FILE
+        history_file = None
+        window_label = "window_1_baseline"
+    else:
+        file_to_run = WINDOW2_DATA_FILE if WINDOW2_DATA_FILE.exists() else DEFAULT_DATA_FILE
+        history_file = WINDOW1_DATA_FILE
+        window_label = "window_2_threats"
+
     _latest_assessment = run_assessment_pipeline(
-        file_path=DEFAULT_DATA_FILE,
+        file_path=file_to_run,
         rule_weight=req.rule_weight,
         anomaly_weight=req.anomaly_weight,
         random_seed=req.random_seed,
         baseline_review_rate=req.baseline_review_rate,
         contamination=req.contamination,
+        window_id=window_label,
+        baseline_history_file=history_file,
     )
     return _latest_assessment
 
@@ -120,6 +148,8 @@ async def upload_and_assess(
             anomaly_weight=anomaly_weight,
             random_seed=random_seed,
             baseline_review_rate=baseline_review_rate,
+            window_id="custom_upload",
+            baseline_history_file=WINDOW1_DATA_FILE if WINDOW1_DATA_FILE.exists() else None,
         )
         return _latest_assessment
     except Exception as e:
@@ -138,10 +168,13 @@ def export_csv():
         recs_str = "; ".join([r.title for r in e.recommendations])
         csv_rows.append({
             "run_id": _latest_assessment.run_id,
+            "window_id": _latest_assessment.window_id,
             "entity_id": e.entity_id,
             "entity_type": e.entity_type,
             "risk_score": e.risk_score,
             "risk_band": e.risk_band,
+            "score_delta": e.score_delta,
+            "trend_status": e.trend_status,
             "anomaly_score": e.anomaly_score,
             "rule_score": e.rule_score,
             "selected_by_random_baseline": e.selected_by_random_baseline,

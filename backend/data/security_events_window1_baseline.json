@@ -1,0 +1,2732 @@
+[
+  {
+    "event_id": "EVT-W1-NORM-user_frank-001",
+    "timestamp": "2026-09-01T13:25:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.87",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 14855,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_dave-000",
+    "timestamp": "2026-09-01T14:25:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 2668,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-service_backup-000",
+    "timestamp": "2026-09-01T12:48:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 19172,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-dev_alice-008",
+    "timestamp": "2026-09-01T11:27:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.61",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 17596,
+    "severity": "info",
+    "metadata": {
+      "dept": "engineering"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_oscar-002",
+    "timestamp": "2026-09-01T10:18:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.187",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 11483,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_kevin-006",
+    "timestamp": "2026-09-01T15:35:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.89",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 4165,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_carol-001",
+    "timestamp": "2026-09-01T13:53:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 12350,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_quinn-008",
+    "timestamp": "2026-09-01T13:48:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 14230,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-service_backup-005",
+    "timestamp": "2026-09-01T09:33:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 3305,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-dev_alice-005",
+    "timestamp": "2026-09-01T14:04:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.61",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 11681,
+    "severity": "info",
+    "metadata": {
+      "dept": "engineering"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_judy-004",
+    "timestamp": "2026-09-01T16:53:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.38",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 10412,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_mike-005",
+    "timestamp": "2026-09-01T13:52:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.65",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 7804,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_jdoe-005",
+    "timestamp": "2026-09-01T09:05:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.159",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 4946,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_grace-002",
+    "timestamp": "2026-09-01T16:15:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.151",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 13838,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-service_backup-003",
+    "timestamp": "2026-09-01T14:51:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 11652,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_oscar-008",
+    "timestamp": "2026-09-01T15:15:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.187",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 681,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_emma-006",
+    "timestamp": "2026-09-01T10:05:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.131",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 2767,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_heidi-007",
+    "timestamp": "2026-09-01T15:57:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.106",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 5894,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_dave-004",
+    "timestamp": "2026-09-01T12:47:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 18161,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_heidi-008",
+    "timestamp": "2026-09-01T15:00:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.106",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 9190,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_heidi-003",
+    "timestamp": "2026-09-01T16:51:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.106",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 3708,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_quinn-003",
+    "timestamp": "2026-09-01T11:45:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 2604,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_mike-004",
+    "timestamp": "2026-09-01T12:52:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.65",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 11957,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-service_backup-006",
+    "timestamp": "2026-09-01T12:46:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 16509,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_oscar-005",
+    "timestamp": "2026-09-01T09:02:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.187",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 16069,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_emma-003",
+    "timestamp": "2026-09-01T09:38:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.131",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 16510,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_oscar-007",
+    "timestamp": "2026-09-01T12:45:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.187",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 16699,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_nina-004",
+    "timestamp": "2026-09-01T14:39:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 4583,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_dave-009",
+    "timestamp": "2026-09-01T10:24:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 15837,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_laura-000",
+    "timestamp": "2026-09-01T11:34:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.196",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 12598,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_nina-000",
+    "timestamp": "2026-09-01T15:38:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 4289,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_bob-007",
+    "timestamp": "2026-09-01T15:21:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.48",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 5594,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_dave-005",
+    "timestamp": "2026-09-01T13:47:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 14538,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_peggy-003",
+    "timestamp": "2026-09-01T15:53:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.198",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 15111,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_quinn-007",
+    "timestamp": "2026-09-01T15:30:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 12026,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_judy-007",
+    "timestamp": "2026-09-01T10:56:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.38",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 18628,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_carol-005",
+    "timestamp": "2026-09-01T13:29:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 5829,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-admin_mscott-002",
+    "timestamp": "2026-09-01T12:53:00+00:00",
+    "entity_id": "admin_mscott",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.158",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 5493,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_mike-010",
+    "timestamp": "2026-09-01T11:37:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.65",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 1753,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_bob-000",
+    "timestamp": "2026-09-01T09:47:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.48",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 8524,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_nina-001",
+    "timestamp": "2026-09-01T15:57:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 6728,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_ivan-007",
+    "timestamp": "2026-09-01T15:07:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.136",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 8567,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_jdoe-001",
+    "timestamp": "2026-09-01T15:31:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.159",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 13242,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_mike-000",
+    "timestamp": "2026-09-01T15:01:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.65",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 11385,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_ivan-005",
+    "timestamp": "2026-09-01T09:32:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.136",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 6589,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_nina-002",
+    "timestamp": "2026-09-01T13:02:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 555,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_ivan-010",
+    "timestamp": "2026-09-01T14:15:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.136",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 13469,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_bob-002",
+    "timestamp": "2026-09-01T10:37:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.48",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 1541,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_bob-008",
+    "timestamp": "2026-09-01T12:48:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.48",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 3849,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_peggy-005",
+    "timestamp": "2026-09-01T13:48:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.198",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 9586,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_quinn-002",
+    "timestamp": "2026-09-01T11:09:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 13051,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-dev_alice-000",
+    "timestamp": "2026-09-01T13:06:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.61",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 1341,
+    "severity": "info",
+    "metadata": {
+      "dept": "engineering"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_jdoe-007",
+    "timestamp": "2026-09-01T15:20:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.159",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 15399,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_frank-003",
+    "timestamp": "2026-09-01T10:21:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.87",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 19777,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_nina-007",
+    "timestamp": "2026-09-01T11:12:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 12923,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_jdoe-000",
+    "timestamp": "2026-09-01T12:31:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.159",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 9443,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_nina-010",
+    "timestamp": "2026-09-01T13:13:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 19504,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_bob-001",
+    "timestamp": "2026-09-01T12:08:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.48",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 18370,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_carol-003",
+    "timestamp": "2026-09-01T12:49:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 3114,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_jdoe-009",
+    "timestamp": "2026-09-01T15:16:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.159",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 15911,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_oscar-006",
+    "timestamp": "2026-09-01T10:29:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.187",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 19363,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_mike-008",
+    "timestamp": "2026-09-01T14:41:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.65",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 13596,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_judy-005",
+    "timestamp": "2026-09-01T09:42:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.38",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 10310,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-dev_alice-010",
+    "timestamp": "2026-09-01T16:27:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.61",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 9294,
+    "severity": "info",
+    "metadata": {
+      "dept": "engineering"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_nina-008",
+    "timestamp": "2026-09-01T11:39:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 10361,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_grace-001",
+    "timestamp": "2026-09-01T11:46:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.151",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 19381,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_kevin-004",
+    "timestamp": "2026-09-01T09:21:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.89",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 9083,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_laura-003",
+    "timestamp": "2026-09-01T12:43:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.196",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 3868,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_bob-003",
+    "timestamp": "2026-09-01T09:05:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.48",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 8123,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_frank-002",
+    "timestamp": "2026-09-01T16:07:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.87",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 7862,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_judy-000",
+    "timestamp": "2026-09-01T09:29:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.38",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 18948,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_dave-006",
+    "timestamp": "2026-09-01T15:23:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 5032,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_carol-000",
+    "timestamp": "2026-09-01T10:59:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 3082,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_heidi-000",
+    "timestamp": "2026-09-01T10:15:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.106",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 6732,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_carol-007",
+    "timestamp": "2026-09-01T10:38:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 18002,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_ivan-001",
+    "timestamp": "2026-09-01T11:12:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.136",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 7633,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_nina-005",
+    "timestamp": "2026-09-01T13:32:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 13882,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_emma-000",
+    "timestamp": "2026-09-01T11:29:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.131",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 9130,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_laura-002",
+    "timestamp": "2026-09-01T13:23:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.196",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 12224,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_bob-010",
+    "timestamp": "2026-09-01T14:38:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.48",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 1923,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_mike-002",
+    "timestamp": "2026-09-01T11:50:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.65",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 13035,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_carol-004",
+    "timestamp": "2026-09-01T12:55:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 12955,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_ivan-002",
+    "timestamp": "2026-09-01T09:37:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.136",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 2497,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_carol-002",
+    "timestamp": "2026-09-01T12:45:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 2001,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_ivan-006",
+    "timestamp": "2026-09-01T10:38:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.136",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 8207,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_mike-007",
+    "timestamp": "2026-09-01T14:17:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.65",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 9646,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_heidi-006",
+    "timestamp": "2026-09-01T15:31:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.106",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 7504,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_judy-006",
+    "timestamp": "2026-09-01T10:56:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.38",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 9166,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_bob-006",
+    "timestamp": "2026-09-01T13:51:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.48",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 5731,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-admin_mscott-001",
+    "timestamp": "2026-09-01T09:48:00+00:00",
+    "entity_id": "admin_mscott",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.158",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 8602,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_carol-006",
+    "timestamp": "2026-09-01T14:22:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 9248,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_judy-001",
+    "timestamp": "2026-09-01T10:04:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.38",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 7484,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_quinn-001",
+    "timestamp": "2026-09-01T14:57:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 3140,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-dev_alice-009",
+    "timestamp": "2026-09-01T13:39:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.61",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 16343,
+    "severity": "info",
+    "metadata": {
+      "dept": "engineering"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_grace-004",
+    "timestamp": "2026-09-01T14:27:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.151",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 15803,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_ivan-003",
+    "timestamp": "2026-09-01T14:03:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.136",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 19642,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-service_backup-002",
+    "timestamp": "2026-09-01T14:11:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 7450,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_frank-006",
+    "timestamp": "2026-09-01T10:57:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.87",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 11327,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_nina-009",
+    "timestamp": "2026-09-01T15:35:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 10457,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-service_backup-004",
+    "timestamp": "2026-09-01T13:56:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 9552,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_heidi-004",
+    "timestamp": "2026-09-01T09:41:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.106",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 983,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_oscar-000",
+    "timestamp": "2026-09-01T14:29:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.187",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 14988,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_ivan-009",
+    "timestamp": "2026-09-01T14:59:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.136",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 7193,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_oscar-003",
+    "timestamp": "2026-09-01T10:52:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.187",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 10671,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_frank-005",
+    "timestamp": "2026-09-01T10:45:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.87",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 8001,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-service_backup-007",
+    "timestamp": "2026-09-01T12:44:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 16583,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_mike-009",
+    "timestamp": "2026-09-01T14:01:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.65",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 9059,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_heidi-005",
+    "timestamp": "2026-09-01T10:59:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.106",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 5949,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_nina-006",
+    "timestamp": "2026-09-01T14:25:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 18666,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_mike-006",
+    "timestamp": "2026-09-01T09:42:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.65",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 13556,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_peggy-001",
+    "timestamp": "2026-09-01T10:29:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.198",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 15725,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_oscar-001",
+    "timestamp": "2026-09-01T12:32:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.187",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 6060,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_ivan-004",
+    "timestamp": "2026-09-01T16:32:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.136",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 5658,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_dave-007",
+    "timestamp": "2026-09-01T16:05:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 4092,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-admin_mscott-004",
+    "timestamp": "2026-09-01T12:29:00+00:00",
+    "entity_id": "admin_mscott",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.158",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 12587,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-dev_alice-003",
+    "timestamp": "2026-09-01T10:44:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.61",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 4466,
+    "severity": "info",
+    "metadata": {
+      "dept": "engineering"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_laura-004",
+    "timestamp": "2026-09-01T14:49:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.196",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 13816,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_peggy-002",
+    "timestamp": "2026-09-01T14:48:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.198",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 17040,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-service_backup-001",
+    "timestamp": "2026-09-01T15:21:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 16697,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_judy-002",
+    "timestamp": "2026-09-01T13:08:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.38",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 2754,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_heidi-001",
+    "timestamp": "2026-09-01T16:08:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.106",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 6512,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_dave-008",
+    "timestamp": "2026-09-01T11:40:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 14333,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_jdoe-004",
+    "timestamp": "2026-09-01T09:58:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.159",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 19895,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_peggy-006",
+    "timestamp": "2026-09-01T16:40:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.198",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 9498,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_quinn-000",
+    "timestamp": "2026-09-01T13:15:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 11505,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_grace-003",
+    "timestamp": "2026-09-01T12:06:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.151",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 14624,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_bob-005",
+    "timestamp": "2026-09-01T15:14:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.48",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 19809,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_nina-003",
+    "timestamp": "2026-09-01T12:23:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 2792,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_frank-000",
+    "timestamp": "2026-09-01T15:13:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.87",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 7091,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_jdoe-002",
+    "timestamp": "2026-09-01T14:42:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.159",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 5908,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_emma-007",
+    "timestamp": "2026-09-01T11:08:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.131",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 18515,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_quinn-004",
+    "timestamp": "2026-09-01T15:26:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 18280,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-admin_mscott-003",
+    "timestamp": "2026-09-01T12:08:00+00:00",
+    "entity_id": "admin_mscott",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.158",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 4248,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-dev_alice-002",
+    "timestamp": "2026-09-01T12:04:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.61",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 8457,
+    "severity": "info",
+    "metadata": {
+      "dept": "engineering"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_kevin-002",
+    "timestamp": "2026-09-01T16:16:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.89",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 3524,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_bob-009",
+    "timestamp": "2026-09-01T10:24:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.48",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 12263,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-admin_mscott-000",
+    "timestamp": "2026-09-01T09:22:00+00:00",
+    "entity_id": "admin_mscott",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.158",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 2748,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_oscar-009",
+    "timestamp": "2026-09-01T10:49:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.187",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 7670,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_dave-003",
+    "timestamp": "2026-09-01T16:09:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 5075,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_ivan-011",
+    "timestamp": "2026-09-01T11:42:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.136",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 15482,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_carol-008",
+    "timestamp": "2026-09-01T12:10:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 12933,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_emma-005",
+    "timestamp": "2026-09-01T12:03:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.131",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 19091,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_emma-001",
+    "timestamp": "2026-09-01T11:32:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.131",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 10279,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_heidi-002",
+    "timestamp": "2026-09-01T13:29:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.106",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 2970,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_grace-000",
+    "timestamp": "2026-09-01T12:17:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.151",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 7520,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_oscar-004",
+    "timestamp": "2026-09-01T12:51:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.187",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 5328,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_kevin-003",
+    "timestamp": "2026-09-01T15:53:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.89",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 1944,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_grace-005",
+    "timestamp": "2026-09-01T09:43:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.151",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 2486,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_frank-004",
+    "timestamp": "2026-09-01T12:37:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.87",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 735,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-admin_mscott-005",
+    "timestamp": "2026-09-01T11:38:00+00:00",
+    "entity_id": "admin_mscott",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.158",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 4253,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-dev_alice-001",
+    "timestamp": "2026-09-01T13:36:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.61",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 13497,
+    "severity": "info",
+    "metadata": {
+      "dept": "engineering"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_bob-004",
+    "timestamp": "2026-09-01T09:35:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.48",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 18356,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_laura-001",
+    "timestamp": "2026-09-01T11:27:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.196",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 1870,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_peggy-000",
+    "timestamp": "2026-09-01T16:03:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.198",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 8665,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_mike-011",
+    "timestamp": "2026-09-01T10:38:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.65",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 11827,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_dave-001",
+    "timestamp": "2026-09-01T12:58:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 10811,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_peggy-004",
+    "timestamp": "2026-09-01T11:47:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.198",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 15247,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_dave-010",
+    "timestamp": "2026-09-01T13:35:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 4253,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_kevin-000",
+    "timestamp": "2026-09-01T13:38:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.89",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 11735,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_laura-005",
+    "timestamp": "2026-09-01T11:59:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.196",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 5824,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_quinn-006",
+    "timestamp": "2026-09-01T15:24:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 1140,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-dev_alice-004",
+    "timestamp": "2026-09-01T09:22:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.61",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 14537,
+    "severity": "info",
+    "metadata": {
+      "dept": "engineering"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_carol-010",
+    "timestamp": "2026-09-01T14:53:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 8005,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_jdoe-006",
+    "timestamp": "2026-09-01T16:11:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.159",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 9024,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_dave-011",
+    "timestamp": "2026-09-01T13:49:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 4155,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_mike-003",
+    "timestamp": "2026-09-01T09:54:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.65",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 7788,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_judy-003",
+    "timestamp": "2026-09-01T12:23:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.38",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 5669,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_kevin-005",
+    "timestamp": "2026-09-01T11:47:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.89",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 18577,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_emma-002",
+    "timestamp": "2026-09-01T12:09:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.131",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 5793,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-dev_alice-007",
+    "timestamp": "2026-09-01T10:27:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.61",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 15564,
+    "severity": "info",
+    "metadata": {
+      "dept": "engineering"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_jdoe-003",
+    "timestamp": "2026-09-01T16:58:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.159",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 18002,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_carol-009",
+    "timestamp": "2026-09-01T13:59:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 7696,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_kevin-001",
+    "timestamp": "2026-09-01T12:43:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.89",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 17061,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_emma-004",
+    "timestamp": "2026-09-01T09:07:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.131",
+    "resource": "/shared/docs/quarterly_memo_3.pdf",
+    "bytes_transferred": 10576,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_jdoe-008",
+    "timestamp": "2026-09-01T14:21:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.159",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 9617,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-dev_alice-006",
+    "timestamp": "2026-09-01T09:54:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.61",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 16562,
+    "severity": "info",
+    "metadata": {
+      "dept": "engineering"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_ivan-000",
+    "timestamp": "2026-09-01T13:27:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.136",
+    "resource": "/shared/docs/quarterly_memo_5.pdf",
+    "bytes_transferred": 16447,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_ivan-008",
+    "timestamp": "2026-09-01T09:39:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.136",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 14237,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_mike-001",
+    "timestamp": "2026-09-01T15:51:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.65",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 9242,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-dev_alice-011",
+    "timestamp": "2026-09-01T14:54:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.61",
+    "resource": "/shared/docs/quarterly_memo_2.pdf",
+    "bytes_transferred": 3339,
+    "severity": "info",
+    "metadata": {
+      "dept": "engineering"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_quinn-005",
+    "timestamp": "2026-09-01T16:26:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/quarterly_memo_1.pdf",
+    "bytes_transferred": 7277,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  },
+  {
+    "event_id": "EVT-W1-NORM-user_dave-002",
+    "timestamp": "2026-09-01T12:41:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/quarterly_memo_4.pdf",
+    "bytes_transferred": 13464,
+    "severity": "info",
+    "metadata": {
+      "dept": "staff"
+    }
+  }
+]

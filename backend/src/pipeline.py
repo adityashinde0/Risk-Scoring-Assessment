@@ -11,6 +11,7 @@ import pandas as pd
 
 from .anomaly_scorer import compute_isolation_forest_scores
 from .baseline import generate_random_baseline
+from .evaluation import evaluate_assessment_methods
 from .feature_builder import build_entity_features
 from .ingestion import ingest_records, load_and_ingest_file
 from .recommendations import generate_recommendations
@@ -32,10 +33,12 @@ def run_assessment_pipeline(
     baseline_review_rate: float = 0.25,
     contamination: float = 0.15,
     n_estimators: int = 100,
+    window_id: str = "window_2_threats",
+    baseline_history_file: Optional[Union[str, Path]] = None,
 ) -> AssessmentOutput:
     """
     Execute full assessment pipeline on event records or local file.
-    Produces schema-compliant AssessmentOutput object.
+    Produces schema-compliant AssessmentOutput object with evaluation benchmarks and score deltas.
     """
     run_id = f"RUN-{datetime.now(timezone.utc).strftime('%Y%m%d%H%M%S')}-{uuid.uuid4().hex[:6]}"
     generated_at = datetime.now(timezone.utc).isoformat()
@@ -53,6 +56,7 @@ def run_assessment_pipeline(
         empty_baseline = generate_random_baseline([], [], baseline_review_rate, random_seed)
         return AssessmentOutput(
             run_id=run_id,
+            window_id=window_id,
             generated_at=generated_at,
             total_entities_evaluated=0,
             risk_band_counts={"low": 0, "medium": 0, "high": 0, "critical": 0},
@@ -67,7 +71,28 @@ def run_assessment_pipeline(
                 "contamination": contamination,
             },
             model_status="FALLBACK_RULE_ONLY",
+            evaluation_benchmark=None,
         )
+
+    # Historical baseline comparison for dynamic adaptation demonstration
+    prev_scores_map: Dict[str, float] = {}
+    if baseline_history_file is not None and Path(baseline_history_file).exists():
+        try:
+            prev_df, _ = load_and_ingest_file(baseline_history_file)
+            if not prev_df.empty:
+                prev_feat_df, _ = build_entity_features(prev_df)
+                prev_rules = compute_all_rule_scores(prev_feat_df)
+                prev_anom = compute_isolation_forest_scores(
+                    prev_feat_df, contamination=contamination, n_estimators=50, random_state=random_seed
+                )
+                for _, prow in prev_feat_df.iterrows():
+                    pe_id = str(prow["entity_id"])
+                    pr_score, _ = prev_rules.get(pe_id, (0.0, []))
+                    pa_score = prev_anom.scores_by_entity.get(pe_id, 0.0)
+                    pf_score, _ = calculate_normalized_risk_score(pr_score, pa_score, rule_weight, anomaly_weight)
+                    prev_scores_map[pe_id] = pf_score
+        except Exception:
+            prev_scores_map = {}
 
     # Step 2: Feature Aggregation
     features_df, entity_type_map = build_entity_features(valid_df)
@@ -113,6 +138,14 @@ def run_assessment_pipeline(
             contributors=contributors,
         )
 
+        # Compute dynamic change metrics
+        prev_score = prev_scores_map.get(entity_id)
+        delta = round(final_score - prev_score, 2) if prev_score is not None else None
+        if delta is not None:
+            trend = "ESCALATED" if delta >= 5.0 else ("REDUCED" if delta <= -5.0 else "STABLE")
+        else:
+            trend = "STABLE"
+
         # Feature summary for analyst inspection
         feat_dict = {
             "total_events": int(row.get("total_events", 0)),
@@ -133,6 +166,9 @@ def run_assessment_pipeline(
             entity_type=entity_type_map.get(entity_id, "user"),
             risk_score=final_score,
             risk_band=risk_band,
+            previous_risk_score=prev_score,
+            score_delta=delta,
+            trend_status=trend,
             anomaly_score=norm_anomaly,
             raw_anomaly_score=raw_anomaly,
             rule_score=rule_score,
@@ -161,8 +197,9 @@ def run_assessment_pipeline(
     # Sort entities by risk_score descending
     entities_results.sort(key=lambda x: x.risk_score, reverse=True)
 
-    return AssessmentOutput(
+    output = AssessmentOutput(
         run_id=run_id,
+        window_id=window_id,
         generated_at=generated_at,
         total_entities_evaluated=len(entities_results),
         risk_band_counts=band_counts,
@@ -178,6 +215,15 @@ def run_assessment_pipeline(
         },
         model_status=anomaly_res.model_status,
     )
+
+    # Step 7: Calculate Multi-Method Evaluation Benchmark
+    try:
+        eval_report = evaluate_assessment_methods(output)
+        output.evaluation_benchmark = eval_report.model_dump()
+    except Exception:
+        output.evaluation_benchmark = None
+
+    return output
 
 
 def export_assessment_to_files(assessment: AssessmentOutput, output_dir: Union[str, Path]) -> Tuple[Path, Path]:
@@ -204,6 +250,8 @@ def export_assessment_to_files(assessment: AssessmentOutput, output_dir: Union[s
             "entity_type": e.entity_type,
             "risk_score": e.risk_score,
             "risk_band": e.risk_band,
+            "score_delta": e.score_delta,
+            "trend_status": e.trend_status,
             "anomaly_score": e.anomaly_score,
             "rule_score": e.rule_score,
             "selected_by_random_baseline": e.selected_by_random_baseline,

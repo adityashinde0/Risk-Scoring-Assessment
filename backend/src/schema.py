@@ -65,6 +65,9 @@ class EntityAssessmentResult(BaseModel):
     entity_type: str = "user"
     risk_score: float = Field(..., ge=5.0, le=50.0, description="Dynamic risk score in range 5.0 to 50.0")
     risk_band: str = Field(..., description="low, medium, high, critical")
+    previous_risk_score: Optional[float] = Field(default=None, description="Previous window risk score if historical window exists")
+    score_delta: Optional[float] = Field(default=None, description="Change in score compared to previous window (+/-)")
+    trend_status: Optional[str] = Field(default="STABLE", description="ESCALATED, STABLE, REDUCED")
     anomaly_score: Optional[float] = Field(default=None, description="Normalized Isolation Forest anomaly signal (0.0 to 1.0)")
     raw_anomaly_score: Optional[float] = Field(default=None, description="Raw model decision function score")
     rule_score: float = Field(..., description="Aggregated explainable rule severity score")
@@ -100,6 +103,7 @@ class BaselineComparisonMetrics(BaseModel):
 class AssessmentOutput(BaseModel):
     """Complete assessment payload contract consumed by API and React dashboard."""
     run_id: str
+    window_id: str = "current_window"
     generated_at: str
     total_entities_evaluated: int
     risk_band_counts: Dict[str, int]
@@ -108,3 +112,4 @@ class AssessmentOutput(BaseModel):
     validation_summary: ValidationSummary
     scoring_config: Dict[str, Any]
     model_status: str  # FIT_SUCCESS, FALLBACK_RULE_ONLY
+    evaluation_benchmark: Optional[Dict[str, Any]] = None

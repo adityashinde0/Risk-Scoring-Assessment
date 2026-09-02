@@ -20,21 +20,30 @@ import {
   Server,
   Filter,
   Lock,
-  ArrowUpDown
+  ArrowUpDown,
+  TrendingUp,
+  Clock,
+  Target,
+  BarChart3,
+  HelpCircle,
 } from 'lucide-react';
 
 const API_BASE = 'http://localhost:8000';
 
 export default function App() {
   const [assessment, setAssessment] = useState(null);
+  const [evaluation, setEvaluation] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [activeTab, setActiveTab] = useState('triage'); // 'triage', 'baseline', 'quarantine', 'config'
+  const [activeTab, setActiveTab] = useState('triage'); // 'triage', 'evaluation', 'baseline', 'quarantine', 'config'
   const [selectedEntity, setSelectedEntity] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [bandFilter, setBandFilter] = useState('all');
   const [sortField, setSortField] = useState('risk_score');
   const [sortAsc, setSortAsc] = useState(false);
+
+  // Time window state
+  const [selectedWindow, setSelectedWindow] = useState('window_2_threats');
 
   // Scoring config state
   const [ruleWeight, setRuleWeight] = useState(0.60);
@@ -44,22 +53,29 @@ export default function App() {
   const [rescoring, setRescoring] = useState(false);
 
   useEffect(() => {
-    fetchAssessment();
-  }, []);
+    fetchAssessment(selectedWindow);
+  }, [selectedWindow]);
 
-  const fetchAssessment = async () => {
+  const fetchAssessment = async (windowId = 'window_2_threats') => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${API_BASE}/api/assessment/latest`);
+      const res = await fetch(`${API_BASE}/api/assessment/run`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          rule_weight: parseFloat(ruleWeight),
+          anomaly_weight: parseFloat(anomalyWeight),
+          random_seed: parseInt(randomSeed, 10),
+          baseline_review_rate: parseFloat(reviewRate),
+          window: windowId,
+        }),
+      });
       if (!res.ok) throw new Error(`Server returned ${res.status}`);
       const data = await res.json();
       setAssessment(data);
-      if (data.scoring_config) {
-        setRuleWeight(data.scoring_config.rule_weight ?? 0.60);
-        setAnomalyWeight(data.scoring_config.anomaly_weight ?? 0.40);
-        setRandomSeed(data.scoring_config.random_seed ?? 42);
-        setReviewRate(data.scoring_config.baseline_review_rate ?? 0.25);
+      if (data.evaluation_benchmark) {
+        setEvaluation(data.evaluation_benchmark);
       }
     } catch (err) {
       console.error(err);
@@ -80,11 +96,15 @@ export default function App() {
           anomaly_weight: parseFloat(anomalyWeight),
           random_seed: parseInt(randomSeed, 10),
           baseline_review_rate: parseFloat(reviewRate),
+          window: selectedWindow,
         }),
       });
       if (!res.ok) throw new Error(`Rescore failed: ${res.status}`);
       const data = await res.json();
       setAssessment(data);
+      if (data.evaluation_benchmark) {
+        setEvaluation(data.evaluation_benchmark);
+      }
     } catch (err) {
       alert('Error triggering re-assessment: ' + err.message);
     } finally {
@@ -107,6 +127,9 @@ export default function App() {
       if (!res.ok) throw new Error(`Upload assessment failed: ${res.status}`);
       const data = await res.json();
       setAssessment(data);
+      if (data.evaluation_benchmark) {
+        setEvaluation(data.evaluation_benchmark);
+      }
       alert(`Successfully loaded and assessed ${data.total_entities_evaluated} entities from ${file.name}`);
     } catch (err) {
       alert('File upload error: ' + err.message);
@@ -143,6 +166,10 @@ export default function App() {
 
   const highCriticalCount = (assessment?.risk_band_counts?.critical || 0) + (assessment?.risk_band_counts?.high || 0);
 
+  const avgScore = assessment?.entities?.length
+    ? (assessment.entities.reduce((acc, curr) => acc + curr.risk_score, 0) / assessment.entities.length).toFixed(1)
+    : '—';
+
   return (
     <div className="app-container">
       {/* Top Navbar */}
@@ -154,12 +181,35 @@ export default function App() {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <span className="brand-title">P-006 Risk Scoring Assessment</span>
-              <span className="brand-badge">PROD-ASSESSMENT</span>
+              <span className="brand-badge">SOC COMMAND</span>
             </div>
             <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-              Isolation Forest + Rule Signal Extraction Engine (5–50 Scale)
+              Dynamic Insider Risk Engine: Isolation Forest + Rule Extraction (5.0–50.0 Scale)
             </p>
           </div>
+        </div>
+
+        {/* Multi-Window Selector */}
+        <div style={{ display: 'flex', alignItems: 'center', background: 'var(--bg-tertiary)', padding: '0.25rem 0.5rem', borderRadius: '8px', border: '1px solid var(--border-subtle)', gap: '0.5rem' }}>
+          <Clock size={14} color="var(--accent-cyan)" />
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>ASSESSMENT WINDOW:</span>
+          <select
+            value={selectedWindow}
+            onChange={(e) => setSelectedWindow(e.target.value)}
+            style={{
+              background: 'var(--bg-secondary)',
+              color: 'white',
+              border: '1px solid var(--border-strong)',
+              borderRadius: '4px',
+              padding: '0.25rem 0.5rem',
+              fontSize: '0.8rem',
+              fontWeight: 600,
+              cursor: 'pointer',
+            }}
+          >
+            <option value="window_2_threats">Window 2: Active Threat Incident (Escalated)</option>
+            <option value="window_1_baseline">Window 1: Baseline Routine Traffic (Normal)</option>
+          </select>
         </div>
 
         <div className="nav-actions">
@@ -176,7 +226,7 @@ export default function App() {
             <Download size={14} /> Export JSON
           </a>
 
-          <button onClick={fetchAssessment} className="btn btn-primary btn-sm" disabled={loading}>
+          <button onClick={() => fetchAssessment(selectedWindow)} className="btn btn-primary btn-sm" disabled={loading}>
             <RefreshCw size={14} className={loading ? 'spin' : ''} /> Refresh
           </button>
         </div>
@@ -197,11 +247,11 @@ export default function App() {
         <div className="kpi-grid">
           <div className="kpi-card">
             <div className="kpi-header">
-              <span>TOTAL SCORED ENTITIES</span>
+              <span>TOTAL ENTITIES SCORED</span>
               <Activity size={16} color="var(--accent-cyan)" />
             </div>
             <div className="kpi-value">{assessment?.total_entities_evaluated ?? '—'}</div>
-            <div className="kpi-subtitle">Active principals in window</div>
+            <div className="kpi-subtitle">Active principals in {assessment?.window_id || 'window'}</div>
           </div>
 
           <div className="kpi-card" style={{ borderLeft: '3px solid var(--risk-critical)' }}>
@@ -219,20 +269,16 @@ export default function App() {
 
           <div className="kpi-card">
             <div className="kpi-header">
-              <span>RANDOM BASELINE OVERLAP</span>
-              <Shuffle size={16} color="var(--accent-indigo)" />
+              <span>AVERAGE RISK SCORE</span>
+              <Target size={16} color="var(--accent-indigo)" />
             </div>
-            <div className="kpi-value">
-              {assessment?.baseline_comparison ? `${(assessment.baseline_comparison.overlap_ratio * 100).toFixed(0)}%` : '—'}
-            </div>
-            <div className="kpi-subtitle">
-              {assessment?.baseline_comparison?.overlap_count || 0} / {assessment?.baseline_comparison?.ml_high_risk_count || 0} high-risk overlap (Seed: {assessment?.baseline_comparison?.seed || 42})
-            </div>
+            <div className="kpi-value">{avgScore} <span style={{ fontSize: '1rem', color: 'var(--text-muted)' }}>/ 50.0</span></div>
+            <div className="kpi-subtitle">Strict invariant range: 5.0 to 50.0</div>
           </div>
 
           <div className="kpi-card">
             <div className="kpi-header">
-              <span>DATA VALIDATION & QUARANTINE</span>
+              <span>DATA INTEGRITY & QUARANTINE</span>
               <Server size={16} color="#10b981" />
             </div>
             <div className="kpi-value" style={{ color: (assessment?.validation_summary?.quarantined_rows_count || 0) > 0 ? '#facc15' : '#10b981' }}>
@@ -253,22 +299,28 @@ export default function App() {
             <Shield size={16} /> Entity Triage & Rankings
           </button>
           <button
+            className={`tab-btn ${activeTab === 'evaluation' ? 'active' : ''}`}
+            onClick={() => setActiveTab('evaluation')}
+          >
+            <BarChart3 size={16} /> Evaluation & Benchmark (4 Methods)
+          </button>
+          <button
             className={`tab-btn ${activeTab === 'baseline' ? 'active' : ''}`}
             onClick={() => setActiveTab('baseline')}
           >
-            <Shuffle size={16} /> Baseline Comparison (ML vs. Random)
+            <Shuffle size={16} /> Random Selection Control
           </button>
           <button
             className={`tab-btn ${activeTab === 'quarantine' ? 'active' : ''}`}
             onClick={() => setActiveTab('quarantine')}
           >
-            <AlertTriangle size={16} /> Quarantine & Row Inspector ({assessment?.validation_summary?.quarantined_rows_count || 0})
+            <AlertTriangle size={16} /> Quarantine Inspector ({assessment?.validation_summary?.quarantined_rows_count || 0})
           </button>
           <button
             className={`tab-btn ${activeTab === 'config' ? 'active' : ''}`}
             onClick={() => setActiveTab('config')}
           >
-            <Sliders size={16} /> Scoring Weights & Hyperparameters
+            <Sliders size={16} /> Scoring Weights
           </button>
         </div>
 
@@ -277,7 +329,7 @@ export default function App() {
           <div className="glass-panel">
             <div className="panel-header">
               <div className="panel-title">
-                <span>Ranked Risk Assessment (Range: 5.0 – 50.0)</span>
+                <span>Dynamic Entity Risk Assessment (Range: 5.0 – 50.0)</span>
                 <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 400 }}>
                   ({filteredEntities.length} entities shown)
                 </span>
@@ -336,12 +388,13 @@ export default function App() {
                     </th>
                     <th>Type</th>
                     <th onClick={() => { setSortField('risk_score'); setSortAsc(!sortAsc); }} style={{ cursor: 'pointer' }}>
-                      Dynamic Risk Score (5–50) {sortField === 'risk_score' && (sortAsc ? '▲' : '▼')}
+                      Risk Score (5–50) {sortField === 'risk_score' && (sortAsc ? '▲' : '▼')}
                     </th>
+                    <th>Dynamic Trend</th>
                     <th>Risk Band</th>
                     <th>Rule Signal</th>
                     <th>Anomaly Signal</th>
-                    <th>Random Baseline?</th>
+                    <th>Random Base?</th>
                     <th>Top Contributor</th>
                     <th>Action</th>
                   </tr>
@@ -349,7 +402,7 @@ export default function App() {
                 <tbody>
                   {filteredEntities.length === 0 ? (
                     <tr>
-                      <td colSpan={9} style={{ textAlign: 'center', padding: '2.5rem', color: 'var(--text-muted)' }}>
+                      <td colSpan={10} style={{ textAlign: 'center', padding: '2.5rem', color: 'var(--text-muted)' }}>
                         No entities match the current search or risk band filter.
                       </td>
                     </tr>
@@ -373,6 +426,23 @@ export default function App() {
                             <Flame size={13} />
                             <span>{entity.risk_score.toFixed(2)}</span>
                           </div>
+                        </td>
+                        <td>
+                          {entity.score_delta !== null && entity.score_delta !== undefined ? (
+                            entity.score_delta > 0 ? (
+                              <span style={{ color: '#f87171', fontSize: '0.8rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
+                                <TrendingUp size={12} /> +{entity.score_delta.toFixed(1)}
+                              </span>
+                            ) : entity.score_delta < 0 ? (
+                              <span style={{ color: '#34d399', fontSize: '0.8rem', fontWeight: 700 }}>
+                                {entity.score_delta.toFixed(1)}
+                              </span>
+                            ) : (
+                              <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>0.0</span>
+                            )
+                          ) : (
+                            <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>—</span>
+                          )}
                         </td>
                         <td>
                           <span style={{ textTransform: 'capitalize', fontWeight: 600, fontSize: '0.85rem' }}>
@@ -399,13 +469,13 @@ export default function App() {
                           )}
                         </td>
                         <td>
-                          <div style={{ maxWidth: '280px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontSize: '0.85rem' }}>
+                          <div style={{ maxWidth: '240px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontSize: '0.85rem' }}>
                             {entity.top_contributors.length > 0 ? (
                               <span title={entity.top_contributors[0].description}>
                                 {entity.top_contributors[0].rule_name} (+{entity.top_contributors[0].score_contribution})
                               </span>
                             ) : (
-                              <span style={{ color: 'var(--text-muted)' }}>Unsupervised anomaly</span>
+                              <span style={{ color: 'var(--text-muted)' }}>Statistical anomaly</span>
                             )}
                           </div>
                         </td>
@@ -426,13 +496,74 @@ export default function App() {
           </div>
         )}
 
-        {/* Tab 2: Baseline Comparison */}
+        {/* Tab 2: Method Evaluation & Benchmark */}
+        {activeTab === 'evaluation' && evaluation && (
+          <div className="glass-panel">
+            <div className="panel-title" style={{ marginBottom: '0.75rem' }}>
+              <BarChart3 size={20} color="var(--accent-cyan)" />
+              <span>Multi-Method Benchmark & Comparative Evaluation</span>
+            </div>
+
+            {/* Benchmark Disclaimer Alert */}
+            <div style={{ background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.3)', borderRadius: '8px', padding: '1rem', marginBottom: '1.5rem', display: 'flex', gap: '0.75rem' }}>
+              <Info color="#818cf8" size={20} style={{ flexShrink: 0, marginTop: '2px' }} />
+              <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                <strong style={{ color: '#c7d2fe' }}>Demonstration & Evaluation Methodology: </strong>
+                {evaluation.disclaimer}
+              </div>
+            </div>
+
+            <p style={{ color: 'var(--text-primary)', fontSize: '0.9rem', marginBottom: '1.25rem', fontWeight: 500 }}>
+              {evaluation.comparative_summary}
+            </p>
+
+            <div className="table-wrapper" style={{ marginBottom: '1.5rem' }}>
+              <table className="soc-table">
+                <thead>
+                  <tr>
+                    <th>Prioritization Method</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                    <th>F1 Score</th>
+                    <th>False Pos. Rate</th>
+                    <th>Top Threat Capture</th>
+                    <th>Prioritized Count</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {evaluation.methods.map((m, idx) => (
+                    <tr key={idx} style={{ background: idx === 0 ? 'rgba(99, 102, 241, 0.12)' : 'inherit', fontWeight: idx === 0 ? 600 : 400 }}>
+                      <td>
+                        <div>
+                          <span style={{ color: idx === 0 ? '#38bdf8' : 'inherit' }}>{m.method_name}</span>
+                          <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 400 }}>{m.description}</div>
+                        </div>
+                      </td>
+                      <td style={{ fontFamily: 'var(--font-mono)' }}>{(m.precision * 100).toFixed(1)}%</td>
+                      <td style={{ fontFamily: 'var(--font-mono)', color: m.recall >= 0.75 ? '#34d399' : 'inherit' }}>
+                        {(m.recall * 100).toFixed(1)}%
+                      </td>
+                      <td style={{ fontFamily: 'var(--font-mono)', color: idx === 0 ? '#38bdf8' : 'inherit', fontWeight: 700 }}>
+                        {m.f1_score.toFixed(2)}
+                      </td>
+                      <td style={{ fontFamily: 'var(--font-mono)' }}>{(m.false_positive_rate * 100).toFixed(1)}%</td>
+                      <td style={{ fontFamily: 'var(--font-mono)' }}>{(m.top_k_threat_capture_rate * 100).toFixed(1)}%</td>
+                      <td style={{ fontFamily: 'var(--font-mono)' }}>{m.prioritized_entities.length} Entities</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+        {/* Tab 3: Baseline Comparison */}
         {activeTab === 'baseline' && assessment?.baseline_comparison && (
           <div>
             <div className="glass-panel">
               <div className="panel-title" style={{ marginBottom: '1rem' }}>
                 <Shuffle size={20} color="var(--accent-cyan)" />
-                <span>ML Model & Rule Prioritization vs. Random Selection Baseline</span>
+                <span>ML Model & Rule Prioritization vs. Random Selection Control</span>
               </div>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>
                 {assessment.baseline_comparison.explanation}
@@ -450,7 +581,7 @@ export default function App() {
                 </div>
 
                 <div style={{ background: 'var(--bg-tertiary)', padding: '1.25rem', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600 }}>RANDOM SELECTION CANDIDATES</div>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600 }}>RANDOM SELECTION CONTROL</div>
                   <div style={{ fontSize: '1.8rem', fontWeight: 700, color: '#06b6d4', margin: '0.5rem 0' }}>
                     {assessment.baseline_comparison.baseline_selected_count} Entities
                   </div>
@@ -465,45 +596,7 @@ export default function App() {
                     {assessment.baseline_comparison.overlap_count} Entities ({(assessment.baseline_comparison.overlap_ratio * 100).toFixed(0)}%)
                   </div>
                   <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-                    Entities surfaced by chance in the random sample.
-                  </div>
-                </div>
-              </div>
-
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-                <div>
-                  <h4 style={{ fontSize: '0.95rem', fontWeight: 600, marginBottom: '0.75rem', color: 'var(--risk-high)' }}>
-                    Prioritized by Predictive ML Model ({assessment.baseline_comparison.isolation_forest_selected.length})
-                  </h4>
-                  <div style={{ background: 'var(--bg-primary)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
-                    {assessment.baseline_comparison.isolation_forest_selected.map((ent) => (
-                      <div key={ent} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.4rem 0', borderBottom: '1px solid var(--border-subtle)', fontSize: '0.85rem' }}>
-                        <span style={{ fontWeight: 600 }}>{ent}</span>
-                        {assessment.baseline_comparison.random_baseline_selected.includes(ent) ? (
-                          <span style={{ color: '#06b6d4', fontSize: '0.75rem' }}>★ Also in Random</span>
-                        ) : (
-                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>ML Unique</span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h4 style={{ fontSize: '0.95rem', fontWeight: 600, marginBottom: '0.75rem', color: '#06b6d4' }}>
-                    Selected by Random Baseline ({assessment.baseline_comparison.random_baseline_selected.length})
-                  </h4>
-                  <div style={{ background: 'var(--bg-primary)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
-                    {assessment.baseline_comparison.random_baseline_selected.map((ent) => (
-                      <div key={ent} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.4rem 0', borderBottom: '1px solid var(--border-subtle)', fontSize: '0.85rem' }}>
-                        <span>{ent}</span>
-                        {assessment.baseline_comparison.isolation_forest_selected.includes(ent) ? (
-                          <span style={{ color: 'var(--risk-critical)', fontSize: '0.75rem', fontWeight: 600 }}>Matched ML Threat</span>
-                        ) : (
-                          <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Benign Sample</span>
-                        )}
-                      </div>
-                    ))}
+                    Entities surfaced purely by chance in the random sample.
                   </div>
                 </div>
               </div>
@@ -511,7 +604,7 @@ export default function App() {
           </div>
         )}
 
-        {/* Tab 3: Quarantine & Row Inspector */}
+        {/* Tab 4: Quarantine Inspector */}
         {activeTab === 'quarantine' && (
           <div className="glass-panel">
             <div className="panel-title" style={{ marginBottom: '1rem' }}>
@@ -579,7 +672,7 @@ export default function App() {
           </div>
         )}
 
-        {/* Tab 4: Scoring Weights & Hyperparameters */}
+        {/* Tab 5: Scoring Weights */}
         {activeTab === 'config' && (
           <div className="glass-panel" style={{ maxWidth: '750px' }}>
             <div className="panel-title" style={{ marginBottom: '1rem' }}>
@@ -734,6 +827,18 @@ export default function App() {
                 <span>Anomaly Intensity: {selectedEntity.anomaly_score !== null ? `${(selectedEntity.anomaly_score * 100).toFixed(0)}%` : 'N/A'}</span>
                 <span>Band: {selectedEntity.risk_band.toUpperCase()}</span>
               </div>
+            </div>
+
+            {/* "Why is this entity risky?" Box */}
+            <div style={{ background: 'rgba(99, 102, 241, 0.08)', border: '1px solid rgba(99, 102, 241, 0.25)', borderRadius: '8px', padding: '1rem', marginBottom: '1.5rem' }}>
+              <h4 style={{ fontSize: '0.9rem', fontWeight: 600, color: '#c7d2fe', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                <HelpCircle size={15} color="#818cf8" /> Why is this entity risky?
+              </h4>
+              <p style={{ fontSize: '0.83rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
+                {selectedEntity.top_contributors.length > 0
+                  ? `Entity '${selectedEntity.entity_id}' generated significant risk signals due to: ${selectedEntity.top_contributors.map(c => c.rule_name).join(', ')}. Isolation Forest evaluated this behavior as a ${(selectedEntity.anomaly_score * 100).toFixed(0)}% anomaly intensity relative to corporate baseline activity.`
+                  : `Entity '${selectedEntity.entity_id}' exhibits statistical anomaly separation in feature space (${(selectedEntity.anomaly_score * 100).toFixed(0)}% anomaly percentile) without single-rule threshold violations.`}
+              </p>
             </div>
 
             {/* Contributing Rules & Patterns */}
