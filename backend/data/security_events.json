@@ -1,0 +1,3366 @@
+[
+  {
+    "event_id": "EVT-NORM-user_quinn-005",
+    "timestamp": "2026-09-01T09:10:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 49583,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_emma-004",
+    "timestamp": "2026-09-01T12:03:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.148",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 5661,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_emma"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_kevin-006",
+    "timestamp": "2026-09-01T11:12:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 44888,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_kevin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-007",
+    "timestamp": "2026-09-01T15:25:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 39303,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_kevin-000",
+    "timestamp": "2026-09-01T15:38:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 38287,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_kevin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_emma-008",
+    "timestamp": "2026-09-01T12:45:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.148",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 44519,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_emma"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_laura-008",
+    "timestamp": "2026-09-01T16:28:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 42289,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_laura"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_frank-006",
+    "timestamp": "2026-09-01T14:51:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.78",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 13056,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_frank"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT1-ODD-000",
+    "timestamp": "2026-09-02T02:30:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "198.51.100.44",
+    "resource": "/secure/finance/q3_salary_data.xlsx",
+    "bytes_transferred": 1200000,
+    "severity": "high",
+    "metadata": {
+      "session": "nightly_ssh"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_oscar-009",
+    "timestamp": "2026-09-01T17:22:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.82",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 22178,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_oscar"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT1-FAIL-003",
+    "timestamp": "2026-09-01T10:09:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "failure",
+    "source_ip": "198.51.100.44",
+    "resource": "/auth/sso",
+    "bytes_transferred": 0,
+    "severity": "medium",
+    "metadata": {
+      "reason": "invalid_password"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_dave-008",
+    "timestamp": "2026-09-01T17:55:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 45176,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_dave"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-010",
+    "timestamp": "2026-09-01T17:41:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_1.pdf",
+    "bytes_transferred": 28028,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT1-FAIL-005",
+    "timestamp": "2026-09-01T10:15:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "failure",
+    "source_ip": "198.51.100.44",
+    "resource": "/auth/sso",
+    "bytes_transferred": 0,
+    "severity": "medium",
+    "metadata": {
+      "reason": "invalid_password"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-012",
+    "timestamp": "2026-09-01T09:39:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 41493,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-009",
+    "timestamp": "2026-09-01T09:22:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 5019,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_laura-007",
+    "timestamp": "2026-09-01T17:27:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 49236,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_laura"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_kevin-008",
+    "timestamp": "2026-09-01T09:19:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 28673,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_kevin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-008",
+    "timestamp": "2026-09-01T13:27:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_1.pdf",
+    "bytes_transferred": 25984,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_emma-010",
+    "timestamp": "2026-09-01T12:04:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.148",
+    "resource": "/shared/docs/report_1.pdf",
+    "bytes_transferred": 39055,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_emma"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_quinn-011",
+    "timestamp": "2026-09-01T09:48:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 3136,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_grace-003",
+    "timestamp": "2026-09-01T12:55:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.91",
+    "resource": "/shared/docs/report_1.pdf",
+    "bytes_transferred": 11289,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_grace"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_emma-007",
+    "timestamp": "2026-09-01T13:33:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.148",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 35843,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_emma"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-011",
+    "timestamp": "2026-09-01T13:55:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 37765,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_dave-004",
+    "timestamp": "2026-09-01T15:23:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 33892,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_dave"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_judy-002",
+    "timestamp": "2026-09-01T12:42:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.169",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 37192,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_judy"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT1-ODD-002",
+    "timestamp": "2026-09-02T03:00:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "198.51.100.44",
+    "resource": "/secure/finance/q3_salary_data.xlsx",
+    "bytes_transferred": 1200000,
+    "severity": "high",
+    "metadata": {
+      "session": "nightly_ssh"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT4-FW-004",
+    "timestamp": "2026-09-01T11:20:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "firewall_event",
+    "outcome": "denied",
+    "source_ip": "10.0.14.2",
+    "resource": "/port/445",
+    "bytes_transferred": 0,
+    "severity": "high",
+    "metadata": {
+      "action": "drop_packet",
+      "rule": "FW-BLOCK-SMB-RDP"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_ivan-004",
+    "timestamp": "2026-09-01T10:40:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.190",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 3389,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_ivan"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-013",
+    "timestamp": "2026-09-01T12:16:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 16219,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_grace-007",
+    "timestamp": "2026-09-01T17:03:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.91",
+    "resource": "/shared/docs/report_1.pdf",
+    "bytes_transferred": 3786,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_grace"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_quinn-010",
+    "timestamp": "2026-09-01T13:01:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 44690,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_carol-002",
+    "timestamp": "2026-09-01T10:02:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 5729,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_carol"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT4-FW-003",
+    "timestamp": "2026-09-01T11:15:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "firewall_event",
+    "outcome": "denied",
+    "source_ip": "10.0.13.2",
+    "resource": "/port/3389",
+    "bytes_transferred": 0,
+    "severity": "high",
+    "metadata": {
+      "action": "drop_packet",
+      "rule": "FW-BLOCK-SMB-RDP"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT1-FAIL-000",
+    "timestamp": "2026-09-01T10:00:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "failure",
+    "source_ip": "198.51.100.44",
+    "resource": "/auth/sso",
+    "bytes_transferred": 0,
+    "severity": "medium",
+    "metadata": {
+      "reason": "invalid_password"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_heidi-007",
+    "timestamp": "2026-09-01T10:56:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.192",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 19176,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_heidi"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_judy-011",
+    "timestamp": "2026-09-01T09:07:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.169",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 38549,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_judy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_grace-006",
+    "timestamp": "2026-09-01T13:13:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.91",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 48717,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_grace"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-009",
+    "timestamp": "2026-09-01T10:15:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 27774,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT2-CFG-001",
+    "timestamp": "2026-09-01T13:08:00+00:00",
+    "entity_id": "admin_mscott",
+    "entity_type": "user",
+    "event_type": "config_change",
+    "outcome": "success",
+    "source_ip": "10.0.1.5",
+    "resource": "/etc/auditd/auditd.conf",
+    "bytes_transferred": 0,
+    "severity": "high",
+    "metadata": {
+      "action": "disable_logging"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_heidi-001",
+    "timestamp": "2026-09-01T09:39:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.192",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 43581,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_heidi"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-004",
+    "timestamp": "2026-09-01T16:06:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 19134,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_dave-003",
+    "timestamp": "2026-09-01T17:34:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 28577,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_dave"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_bob-002",
+    "timestamp": "2026-09-01T09:01:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 15747,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_bob"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_quinn-007",
+    "timestamp": "2026-09-01T13:44:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 33298,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_oscar-008",
+    "timestamp": "2026-09-01T12:19:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.82",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 36772,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_oscar"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-003",
+    "timestamp": "2026-09-01T09:35:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 42303,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-003",
+    "timestamp": "2026-09-01T15:26:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 31034,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_emma-000",
+    "timestamp": "2026-09-01T11:32:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.148",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 42374,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_emma"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_grace-005",
+    "timestamp": "2026-09-01T13:27:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.91",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 12945,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_grace"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_frank-005",
+    "timestamp": "2026-09-01T09:43:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.78",
+    "resource": "/shared/docs/report_1.pdf",
+    "bytes_transferred": 26886,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_frank"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-006",
+    "timestamp": "2026-09-01T14:19:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 35772,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_judy-006",
+    "timestamp": "2026-09-01T11:50:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.169",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 3037,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_judy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_bob-006",
+    "timestamp": "2026-09-01T15:21:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 14610,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_bob"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_dave-010",
+    "timestamp": "2026-09-01T13:27:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 712,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_dave"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_kevin-012",
+    "timestamp": "2026-09-01T12:43:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 13550,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_kevin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_frank-007",
+    "timestamp": "2026-09-01T12:34:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.78",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 28148,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_frank"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_carol-005",
+    "timestamp": "2026-09-01T14:13:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 40420,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_carol"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_judy-003",
+    "timestamp": "2026-09-01T15:39:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.169",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 11149,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_judy"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT1-ODD-004",
+    "timestamp": "2026-09-02T03:30:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "198.51.100.44",
+    "resource": "/secure/finance/q3_salary_data.xlsx",
+    "bytes_transferred": 1200000,
+    "severity": "high",
+    "metadata": {
+      "session": "nightly_ssh"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-002",
+    "timestamp": "2026-09-01T12:53:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 10486,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_heidi-008",
+    "timestamp": "2026-09-01T11:28:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.192",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 43358,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_heidi"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_carol-006",
+    "timestamp": "2026-09-01T11:34:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 30794,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_carol"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_bob-008",
+    "timestamp": "2026-09-01T14:54:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 17835,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_bob"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT3-EXFIL-002",
+    "timestamp": "2026-09-01T14:24:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.2.14",
+    "resource": "/customer_db/dump_2026.tar.gz",
+    "bytes_transferred": 36700160,
+    "severity": "critical",
+    "metadata": {
+      "proto": "sftp",
+      "dest": "203.0.113.88"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-011",
+    "timestamp": "2026-09-01T09:05:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 30757,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT2-CFG-002",
+    "timestamp": "2026-09-01T13:16:00+00:00",
+    "entity_id": "admin_mscott",
+    "entity_type": "user",
+    "event_type": "config_change",
+    "outcome": "success",
+    "source_ip": "10.0.1.5",
+    "resource": "/etc/auditd/auditd.conf",
+    "bytes_transferred": 0,
+    "severity": "high",
+    "metadata": {
+      "action": "disable_logging"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-013",
+    "timestamp": "2026-09-01T17:41:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 35769,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_oscar-011",
+    "timestamp": "2026-09-01T13:14:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.82",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 21179,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_oscar"
+    }
+  },
+  {
+    "event_id": "",
+    "timestamp": "2026-09-01T09:00:00+00:00",
+    "entity_id": "user_malformed_1",
+    "event_type": "login",
+    "outcome": "success"
+  },
+  {
+    "event_id": "EVT-NORM-user_carol-001",
+    "timestamp": "2026-09-01T13:53:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 13101,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_carol"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_grace-002",
+    "timestamp": "2026-09-01T12:10:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.91",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 32046,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_grace"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_frank-003",
+    "timestamp": "2026-09-01T15:12:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.78",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 43687,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_frank"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_quinn-001",
+    "timestamp": "2026-09-01T13:44:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 45548,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_quinn-006",
+    "timestamp": "2026-09-01T13:28:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 45633,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT2-PRIV-002",
+    "timestamp": "2026-09-01T12:20:00+00:00",
+    "entity_id": "admin_mscott",
+    "entity_type": "user",
+    "event_type": "privilege_change",
+    "outcome": "success",
+    "source_ip": "10.0.1.5",
+    "resource": "/iam/roles/DomainAdmins",
+    "bytes_transferred": 0,
+    "severity": "critical",
+    "metadata": {
+      "target_grantee": "shadow_admin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_kevin-003",
+    "timestamp": "2026-09-01T10:42:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 21072,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_kevin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_laura-000",
+    "timestamp": "2026-09-01T09:15:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 5272,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_laura"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_dave-001",
+    "timestamp": "2026-09-01T14:13:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 42629,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_dave"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_bob-001",
+    "timestamp": "2026-09-01T10:43:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 28151,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_bob"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-010",
+    "timestamp": "2026-09-01T11:39:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 39290,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_ivan-000",
+    "timestamp": "2026-09-01T17:19:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.190",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 17832,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_ivan"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_kevin-005",
+    "timestamp": "2026-09-01T15:20:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 36833,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_kevin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_grace-008",
+    "timestamp": "2026-09-01T16:32:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.91",
+    "resource": "/shared/docs/report_1.pdf",
+    "bytes_transferred": 33781,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_grace"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_carol-003",
+    "timestamp": "2026-09-01T12:55:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 18717,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_carol"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-004",
+    "timestamp": "2026-09-01T15:03:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 26024,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-014",
+    "timestamp": "2026-09-01T13:48:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 5867,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT1-ODD-003",
+    "timestamp": "2026-09-02T03:15:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "198.51.100.44",
+    "resource": "/secure/finance/q3_salary_data.xlsx",
+    "bytes_transferred": 1200000,
+    "severity": "high",
+    "metadata": {
+      "session": "nightly_ssh"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_carol-007",
+    "timestamp": "2026-09-01T15:17:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 4165,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_carol"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_bob-004",
+    "timestamp": "2026-09-01T17:26:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 39118,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_bob"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_heidi-005",
+    "timestamp": "2026-09-01T16:39:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.192",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 35734,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_heidi"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_oscar-002",
+    "timestamp": "2026-09-01T16:54:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.82",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 32452,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_oscar"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_judy-008",
+    "timestamp": "2026-09-01T13:52:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.169",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 2050,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_judy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_oscar-003",
+    "timestamp": "2026-09-01T12:22:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.82",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 18827,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_oscar"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-002",
+    "timestamp": "2026-09-01T09:45:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 3482,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-000",
+    "timestamp": "2026-09-01T13:15:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 21452,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_kevin-002",
+    "timestamp": "2026-09-01T17:59:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 28765,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_kevin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_heidi-002",
+    "timestamp": "2026-09-01T17:20:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.192",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 44391,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_heidi"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_kevin-007",
+    "timestamp": "2026-09-01T11:39:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 36409,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_kevin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-010",
+    "timestamp": "2026-09-01T12:49:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 29514,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_bob-005",
+    "timestamp": "2026-09-01T13:51:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 46253,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_bob"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_quinn-004",
+    "timestamp": "2026-09-01T11:58:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 5179,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_kevin-011",
+    "timestamp": "2026-09-01T10:18:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 49726,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_kevin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_oscar-012",
+    "timestamp": "2026-09-01T10:47:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.82",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 14680,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_oscar"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_grace-001",
+    "timestamp": "2026-09-01T10:03:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.91",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 49885,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_grace"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT3-EXFIL-000",
+    "timestamp": "2026-09-01T14:00:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.2.14",
+    "resource": "/customer_db/dump_2026.tar.gz",
+    "bytes_transferred": 36700160,
+    "severity": "critical",
+    "metadata": {
+      "proto": "sftp",
+      "dest": "203.0.113.88"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_oscar-010",
+    "timestamp": "2026-09-01T14:44:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.82",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 20594,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_oscar"
+    }
+  },
+  {
+    "event_id": "EVT-NO-ENTITY-001",
+    "timestamp": "2026-09-01T10:00:00+00:00",
+    "entity_id": "   ",
+    "event_type": "file_access",
+    "outcome": "success"
+  },
+  {
+    "event_id": "EVT-NORM-user_dave-007",
+    "timestamp": "2026-09-01T15:24:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 16976,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_dave"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT4-FW-002",
+    "timestamp": "2026-09-01T11:10:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "firewall_event",
+    "outcome": "denied",
+    "source_ip": "10.0.12.2",
+    "resource": "/port/445",
+    "bytes_transferred": 0,
+    "severity": "high",
+    "metadata": {
+      "action": "drop_packet",
+      "rule": "FW-BLOCK-SMB-RDP"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_heidi-000",
+    "timestamp": "2026-09-01T12:25:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.192",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 16635,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_heidi"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT1-FAIL-002",
+    "timestamp": "2026-09-01T10:06:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "failure",
+    "source_ip": "198.51.100.44",
+    "resource": "/auth/sso",
+    "bytes_transferred": 0,
+    "severity": "medium",
+    "metadata": {
+      "reason": "invalid_password"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_oscar-005",
+    "timestamp": "2026-09-01T10:15:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.82",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 36884,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_oscar"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_kevin-009",
+    "timestamp": "2026-09-01T14:29:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 44777,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_kevin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-008",
+    "timestamp": "2026-09-01T12:06:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 8433,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_frank-002",
+    "timestamp": "2026-09-01T17:08:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.78",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 31496,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_frank"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_frank-004",
+    "timestamp": "2026-09-01T15:22:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.78",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 31106,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_frank"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-008",
+    "timestamp": "2026-09-01T09:09:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 20412,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-011",
+    "timestamp": "2026-09-01T16:06:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 42153,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-000",
+    "timestamp": "2026-09-01T17:38:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 13221,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_dave-002",
+    "timestamp": "2026-09-01T16:09:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 16662,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_dave"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_laura-009",
+    "timestamp": "2026-09-01T13:49:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 18496,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_laura"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_oscar-001",
+    "timestamp": "2026-09-01T16:36:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.82",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 2380,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_oscar"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT4-FW-001",
+    "timestamp": "2026-09-01T11:05:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "firewall_event",
+    "outcome": "denied",
+    "source_ip": "10.0.11.2",
+    "resource": "/port/3389",
+    "bytes_transferred": 0,
+    "severity": "high",
+    "metadata": {
+      "action": "drop_packet",
+      "rule": "FW-BLOCK-SMB-RDP"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_oscar-007",
+    "timestamp": "2026-09-01T09:05:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.82",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 27002,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_oscar"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_judy-000",
+    "timestamp": "2026-09-01T17:09:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.169",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 3241,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_judy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_laura-006",
+    "timestamp": "2026-09-01T17:35:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 40650,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_laura"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_judy-001",
+    "timestamp": "2026-09-01T13:23:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.169",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 14267,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_judy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_ivan-005",
+    "timestamp": "2026-09-01T09:21:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.190",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 11089,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_ivan"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT1-FAIL-004",
+    "timestamp": "2026-09-01T10:12:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "failure",
+    "source_ip": "198.51.100.44",
+    "resource": "/auth/sso",
+    "bytes_transferred": 0,
+    "severity": "medium",
+    "metadata": {
+      "reason": "invalid_password"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_quinn-003",
+    "timestamp": "2026-09-01T12:27:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 15233,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-003",
+    "timestamp": "2026-09-01T12:08:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 37460,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_judy-012",
+    "timestamp": "2026-09-01T13:02:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.169",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 28979,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_judy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_oscar-004",
+    "timestamp": "2026-09-01T13:35:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.82",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 13021,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_oscar"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_ivan-003",
+    "timestamp": "2026-09-01T13:32:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.190",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 3829,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_ivan"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_dave-000",
+    "timestamp": "2026-09-01T14:25:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 14326,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_dave"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_emma-006",
+    "timestamp": "2026-09-01T11:08:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.148",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 11321,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_emma"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_oscar-006",
+    "timestamp": "2026-09-01T12:44:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.82",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 29871,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_oscar"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_quinn-012",
+    "timestamp": "2026-09-01T11:30:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 12394,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_kevin-010",
+    "timestamp": "2026-09-01T12:32:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 43678,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_kevin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_emma-009",
+    "timestamp": "2026-09-01T14:28:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.148",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 16746,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_emma"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT2-PRIV-001",
+    "timestamp": "2026-09-01T12:10:00+00:00",
+    "entity_id": "admin_mscott",
+    "entity_type": "user",
+    "event_type": "privilege_change",
+    "outcome": "success",
+    "source_ip": "10.0.1.5",
+    "resource": "/iam/roles/DomainAdmins",
+    "bytes_transferred": 0,
+    "severity": "critical",
+    "metadata": {
+      "target_grantee": "shadow_admin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_heidi-004",
+    "timestamp": "2026-09-01T13:29:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.192",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 1110,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_heidi"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-009",
+    "timestamp": "2026-09-01T14:42:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 31130,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-012",
+    "timestamp": "2026-09-01T11:03:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 21953,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_laura-005",
+    "timestamp": "2026-09-01T10:29:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 44250,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_laura"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_ivan-002",
+    "timestamp": "2026-09-01T13:18:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.190",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 13842,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_ivan"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-004",
+    "timestamp": "2026-09-01T12:29:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 11496,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_ivan-007",
+    "timestamp": "2026-09-01T10:04:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.190",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 2861,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_ivan"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT3-EXFIL-003",
+    "timestamp": "2026-09-01T14:36:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.2.14",
+    "resource": "/customer_db/dump_2026.tar.gz",
+    "bytes_transferred": 36700160,
+    "severity": "critical",
+    "metadata": {
+      "proto": "sftp",
+      "dest": "203.0.113.88"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_emma-011",
+    "timestamp": "2026-09-01T17:14:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.148",
+    "resource": "/shared/docs/report_1.pdf",
+    "bytes_transferred": 5152,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_emma"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_emma-002",
+    "timestamp": "2026-09-01T11:34:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.148",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 21743,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_emma"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT1-FAIL-001",
+    "timestamp": "2026-09-01T10:03:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "failure",
+    "source_ip": "198.51.100.44",
+    "resource": "/auth/sso",
+    "bytes_transferred": 0,
+    "severity": "medium",
+    "metadata": {
+      "reason": "invalid_password"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT1-ODD-001",
+    "timestamp": "2026-09-02T02:45:00+00:00",
+    "entity_id": "user_jdoe",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "198.51.100.44",
+    "resource": "/secure/finance/q3_salary_data.xlsx",
+    "bytes_transferred": 1200000,
+    "severity": "high",
+    "metadata": {
+      "session": "nightly_ssh"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_grace-009",
+    "timestamp": "2026-09-01T10:54:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.91",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 39496,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_grace"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_dave-006",
+    "timestamp": "2026-09-01T11:50:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 4663,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_dave"
+    }
+  },
+  {
+    "event_id": "EVT-BAD-TIME-001",
+    "timestamp": "INVALID_TIMESTAMP_STRING",
+    "entity_id": "user_malformed_2",
+    "event_type": "login",
+    "outcome": "success"
+  },
+  {
+    "event_id": "EVT-NORM-user_quinn-009",
+    "timestamp": "2026-09-01T09:56:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 40064,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_bob-003",
+    "timestamp": "2026-09-01T17:38:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 13531,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_bob"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_oscar-000",
+    "timestamp": "2026-09-01T10:17:00+00:00",
+    "entity_id": "user_oscar",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.82",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 49683,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_oscar"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_judy-004",
+    "timestamp": "2026-09-01T11:56:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.169",
+    "resource": "/shared/docs/report_1.pdf",
+    "bytes_transferred": 12254,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_judy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_frank-000",
+    "timestamp": "2026-09-01T10:57:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.78",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 5143,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_frank"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_heidi-003",
+    "timestamp": "2026-09-01T14:15:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.192",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 9077,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_heidi"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-001",
+    "timestamp": "2026-09-01T13:14:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 20309,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-007",
+    "timestamp": "2026-09-01T15:31:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 41751,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_bob-007",
+    "timestamp": "2026-09-01T14:06:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 6838,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_bob"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_emma-003",
+    "timestamp": "2026-09-01T16:01:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.148",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 20653,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_emma"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-013",
+    "timestamp": "2026-09-01T12:29:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 25346,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-001",
+    "timestamp": "2026-09-01T17:05:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 15655,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT3-EXFIL-001",
+    "timestamp": "2026-09-01T14:12:00+00:00",
+    "entity_id": "dev_alice",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.2.14",
+    "resource": "/customer_db/dump_2026.tar.gz",
+    "bytes_transferred": 36700160,
+    "severity": "critical",
+    "metadata": {
+      "proto": "sftp",
+      "dest": "203.0.113.88"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_emma-005",
+    "timestamp": "2026-09-01T10:46:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.148",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 35411,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_emma"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT2-CFG-000",
+    "timestamp": "2026-09-01T13:00:00+00:00",
+    "entity_id": "admin_mscott",
+    "entity_type": "user",
+    "event_type": "config_change",
+    "outcome": "success",
+    "source_ip": "10.0.1.5",
+    "resource": "/etc/auditd/auditd.conf",
+    "bytes_transferred": 0,
+    "severity": "high",
+    "metadata": {
+      "action": "disable_logging"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_ivan-001",
+    "timestamp": "2026-09-01T10:56:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.190",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 10687,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_ivan"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_grace-004",
+    "timestamp": "2026-09-01T15:00:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.91",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 30319,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_grace"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_quinn-013",
+    "timestamp": "2026-09-01T15:40:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 31302,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-002",
+    "timestamp": "2026-09-01T15:44:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 4709,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-006",
+    "timestamp": "2026-09-01T09:16:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 4782,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-001",
+    "timestamp": "2026-09-01T10:49:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_1.pdf",
+    "bytes_transferred": 16705,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-005",
+    "timestamp": "2026-09-01T16:30:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 12582,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_kevin-004",
+    "timestamp": "2026-09-01T10:46:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 20769,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_kevin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-006",
+    "timestamp": "2026-09-01T09:59:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 44890,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_grace-000",
+    "timestamp": "2026-09-01T16:15:00+00:00",
+    "entity_id": "user_grace",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.91",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 36566,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_grace"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_carol-004",
+    "timestamp": "2026-09-01T16:40:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 24760,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_carol"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT4-FW-000",
+    "timestamp": "2026-09-01T11:00:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "firewall_event",
+    "outcome": "denied",
+    "source_ip": "10.0.10.2",
+    "resource": "/port/445",
+    "bytes_transferred": 0,
+    "severity": "high",
+    "metadata": {
+      "action": "drop_packet",
+      "rule": "FW-BLOCK-SMB-RDP"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-007",
+    "timestamp": "2026-09-01T17:51:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 14880,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-012",
+    "timestamp": "2026-09-01T16:45:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 12043,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_peggy-014",
+    "timestamp": "2026-09-01T11:35:00+00:00",
+    "entity_id": "user_peggy",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.90",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 675,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_peggy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_bob-000",
+    "timestamp": "2026-09-01T13:15:00+00:00",
+    "entity_id": "user_bob",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 48765,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_bob"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-005",
+    "timestamp": "2026-09-01T10:49:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 7584,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_laura-002",
+    "timestamp": "2026-09-01T15:15:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_1.pdf",
+    "bytes_transferred": 49715,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_laura"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_emma-001",
+    "timestamp": "2026-09-01T17:38:00+00:00",
+    "entity_id": "user_emma",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.148",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 25004,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_emma"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT4-FW-005",
+    "timestamp": "2026-09-01T11:25:00+00:00",
+    "entity_id": "service_backup",
+    "entity_type": "service_account",
+    "event_type": "firewall_event",
+    "outcome": "denied",
+    "source_ip": "10.0.15.2",
+    "resource": "/port/3389",
+    "bytes_transferred": 0,
+    "severity": "high",
+    "metadata": {
+      "action": "drop_packet",
+      "rule": "FW-BLOCK-SMB-RDP"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_heidi-006",
+    "timestamp": "2026-09-01T12:32:00+00:00",
+    "entity_id": "user_heidi",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.192",
+    "resource": "/shared/docs/report_3.pdf",
+    "bytes_transferred": 23372,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_heidi"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_judy-005",
+    "timestamp": "2026-09-01T14:50:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.169",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 17985,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_judy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_dave-005",
+    "timestamp": "2026-09-01T16:05:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 10516,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_dave"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_mike-005",
+    "timestamp": "2026-09-01T09:54:00+00:00",
+    "entity_id": "user_mike",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.39",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 886,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_mike"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_carol-000",
+    "timestamp": "2026-09-01T17:07:00+00:00",
+    "entity_id": "user_carol",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.137",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 36678,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_carol"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-014",
+    "timestamp": "2026-09-01T16:29:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 18089,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-THREAT2-PRIV-000",
+    "timestamp": "2026-09-01T12:00:00+00:00",
+    "entity_id": "admin_mscott",
+    "entity_type": "user",
+    "event_type": "privilege_change",
+    "outcome": "success",
+    "source_ip": "10.0.1.5",
+    "resource": "/iam/roles/DomainAdmins",
+    "bytes_transferred": 0,
+    "severity": "critical",
+    "metadata": {
+      "target_grantee": "shadow_admin"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_laura-001",
+    "timestamp": "2026-09-01T16:26:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 32899,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_laura"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_quinn-000",
+    "timestamp": "2026-09-01T16:18:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 19381,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_ivan-006",
+    "timestamp": "2026-09-01T16:35:00+00:00",
+    "entity_id": "user_ivan",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.190",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 1133,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_ivan"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_nina-000",
+    "timestamp": "2026-09-01T17:03:00+00:00",
+    "entity_id": "user_nina",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.24",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 43107,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_nina"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_quinn-008",
+    "timestamp": "2026-09-01T17:31:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_2.pdf",
+    "bytes_transferred": 39692,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_laura-004",
+    "timestamp": "2026-09-01T17:29:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 16831,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_laura"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_judy-009",
+    "timestamp": "2026-09-01T12:25:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.169",
+    "resource": "/shared/docs/report_5.pdf",
+    "bytes_transferred": 5049,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_judy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_frank-001",
+    "timestamp": "2026-09-01T17:15:00+00:00",
+    "entity_id": "user_frank",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.78",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 14540,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_frank"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_dave-009",
+    "timestamp": "2026-09-01T17:48:00+00:00",
+    "entity_id": "user_dave",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.28",
+    "resource": "/shared/docs/report_6.pdf",
+    "bytes_transferred": 7810,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_dave"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_quinn-002",
+    "timestamp": "2026-09-01T12:59:00+00:00",
+    "entity_id": "user_quinn",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.135",
+    "resource": "/shared/docs/report_10.pdf",
+    "bytes_transferred": 43831,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_quinn"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_judy-007",
+    "timestamp": "2026-09-01T16:14:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "file_access",
+    "outcome": "success",
+    "source_ip": "10.0.1.169",
+    "resource": "/shared/docs/report_8.pdf",
+    "bytes_transferred": 23415,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_judy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_judy-010",
+    "timestamp": "2026-09-01T13:22:00+00:00",
+    "entity_id": "user_judy",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.169",
+    "resource": "/shared/docs/report_9.pdf",
+    "bytes_transferred": 22202,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_judy"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_laura-003",
+    "timestamp": "2026-09-01T10:49:00+00:00",
+    "entity_id": "user_laura",
+    "entity_type": "user",
+    "event_type": "data_transfer",
+    "outcome": "success",
+    "source_ip": "10.0.1.26",
+    "resource": "/shared/docs/report_4.pdf",
+    "bytes_transferred": 12026,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_laura"
+    }
+  },
+  {
+    "event_id": "EVT-NORM-user_kevin-001",
+    "timestamp": "2026-09-01T12:16:00+00:00",
+    "entity_id": "user_kevin",
+    "entity_type": "user",
+    "event_type": "login",
+    "outcome": "success",
+    "source_ip": "10.0.1.100",
+    "resource": "/shared/docs/report_7.pdf",
+    "bytes_transferred": 610,
+    "severity": "info",
+    "metadata": {
+      "dept": "marketing",
+      "workstation": "WS-user_kevin"
+    }
+  }
+]
