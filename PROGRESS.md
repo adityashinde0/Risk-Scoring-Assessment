@@ -38,32 +38,34 @@ The P-006 Predictive Risk Scoring Assessment platform has undergone a comprehens
 | **Benchmark Runner** | [`backend/benchmark.py`](file:///c:/Users/Shind/OneDrive/Desktop/P-006/backend/benchmark.py) | CLI evaluation tool comparing all 4 prioritization approaches. | Complete |
 | **FastAPI Backend** | [`backend/src/api/server.py`](file:///c:/Users/Shind/OneDrive/Desktop/P-006/backend/src/api/server.py) | REST API on port 8000 for latest assessment, entity lookups, evaluation metrics, and exports. | Complete |
 | **React SOC Dashboard** | [`frontend/src/App.jsx`](file:///c:/Users/Shind/OneDrive/Desktop/P-006/frontend/src/App.jsx) | React JS dashboard with multi-window selector, 4-method evaluation tab, and "Why is this entity risky?" modal. | Complete |
-| **Test Suite** | [`backend/tests/test_invariants.py`](file:///c:/Users/Shind/OneDrive/Desktop/P-006/backend/tests/test_invariants.py) | 15 automated invariant and robustness tests. | Complete |
+| **Test Suite** | [`backend/tests/test_invariants.py`](file:///c:/Users/Shind/OneDrive/Desktop/P-006/backend/tests/test_invariants.py) | 17 automated invariant and robustness tests. | Complete |
 
 ---
 
 ## 3. Automated Invariant Test Verification
 
-All 15 automated tests passed via `pytest backend/tests/ -v`:
+All 17 automated tests passed via `pytest backend/tests/ -v`:
 
 ```text
-backend/tests/test_invariants.py::test_empty_dataset_graceful_handling PASSED
+backend/tests/test_invariants.py::test_csv_ingestion_and_metadata_parsing PASSED
 backend/tests/test_invariants.py::test_evaluation_benchmark_metrics PASSED
+backend/tests/test_invariants.py::test_gradient_threat_sensitivity PASSED
+backend/tests/test_invariants.py::test_invariant_4_baseline_population_alignment PASSED
+backend/tests/test_invariants.py::test_invariant_5_row_quarantine_resilience PASSED
+backend/tests/test_invariants.py::test_empty_csv_file_graceful_handling PASSED
 backend/tests/test_invariants.py::test_invariant_3_high_risk_explanation_coverage PASSED
+backend/tests/test_invariants.py::test_empty_dataset_graceful_handling PASSED
+backend/tests/test_invariants.py::test_invariant_6_reproducibility_with_seed PASSED
 backend/tests/test_invariants.py::test_invariant_1_score_bounds_and_validity PASSED
 backend/tests/test_invariants.py::test_score_sensitivity_to_threat_injection PASSED
-backend/tests/test_invariants.py::test_empty_csv_file_graceful_handling PASSED
-backend/tests/test_invariants.py::test_invariant_6_reproducibility_with_seed PASSED
-backend/tests/test_invariants.py::test_extreme_score_clamping PASSED
-backend/tests/test_invariants.py::test_csv_ingestion_and_metadata_parsing PASSED
 backend/tests/test_invariants.py::test_dynamic_window_score_shift PASSED
-backend/tests/test_invariants.py::test_invariant_4_baseline_population_alignment PASSED
-backend/tests/test_invariants.py::test_api_endpoints_integration PASSED
-backend/tests/test_invariants.py::test_recommendation_linkage_to_contributors PASSED
+backend/tests/test_invariants.py::test_benign_unusual_entity_non_threat PASSED
 backend/tests/test_invariants.py::test_invariant_2_entity_id_integrity PASSED
-backend/tests/test_invariants.py::test_invariant_5_row_quarantine_resilience PASSED
+backend/tests/test_invariants.py::test_api_endpoints_integration PASSED
+backend/tests/test_invariants.py::test_extreme_score_clamping PASSED
+backend/tests/test_invariants.py::test_recommendation_linkage_to_contributors PASSED
 
-============================== 15 passed in 7.56s ==============================
+============================== 17 passed in 11.19s ==============================
 ```
 
 ---
@@ -72,7 +74,7 @@ backend/tests/test_invariants.py::test_invariant_5_row_quarantine_resilience PAS
 
 | Method | Precision | Recall | F1 Score | False Positive Rate | Top Threat Capture |
 |---|---|---|---|---|---|
-| **Combined Dynamic Risk Scoring (P-006 System)** | **100.0%** | **100.0%** | **1.00** | **0.0%** | **100.0%** |
+| **Combined Dynamic Risk Scoring (P-006 System)** | **100.0%** | **75.0%** | **0.86** | **0.0%** | **75.0%** |
 | **Rule-Only Signal Engine** | 100.0% | 100.0% | 1.00 | 0.0% | 100.0% |
-| **Isolation Forest ML** | 80.0% | 100.0% | 0.89 | 6.2% | 100.0% |
-| **Random Selection Baseline** | 20.0% | 25.0% | 0.22 | 25.0% | 25.0% |
+| **Isolation Forest ML** | 80.0% | 100.0% | 0.89 | 5.9% | 100.0% |
+| **Random Selection Baseline** | 20.0% | 25.0% | 0.22 | 23.5% | 25.0% |

@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/scikit--learn-Isolation_Forest-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn" />
   <img src="https://img.shields.io/badge/FastAPI-0.100%2B-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
   <img src="https://img.shields.io/badge/Vite-6.x-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/Pytest-15%2F15%20Passed-brightgreen?style=for-the-badge&logo=pytest&logoColor=white" alt="Pytest" />
+  <img src="https://img.shields.io/badge/Pytest-17%2F17%20Passed-brightgreen?style=for-the-badge&logo=pytest&logoColor=white" alt="Pytest" />
 </p>
 
 <p align="center">
@@ -137,10 +137,10 @@ To avoid ungrounded claims, the repository includes an automated evaluation harn
 
 | Prioritization Strategy | Precision | Recall | F1 Score | False Positive Rate | Threat Capture Rate |
 |---|---|---|---|---|---|
-| **Combined Dynamic Risk (P-006)** | **100.0%** | **100.0%** | **1.00** | **0.0%** | **100.0%** |
+| **Combined Dynamic Risk (P-006)** | **100.0%** | **75.0%** | **0.86** | **0.0%** | **75.0%** |
 | **Rule-Only Signal Engine** | 100.0% | 100.0% | 1.00 | 0.0% | 100.0% |
-| **Isolation Forest ML** | 80.0% | 100.0% | 0.89 | 6.2% | 100.0% |
-| **Random Selection Baseline** | 20.0% | 25.0% | 0.22 | 25.0% | 25.0% |
+| **Isolation Forest ML** | 80.0% | 100.0% | 0.89 | 5.9% | 100.0% |
+| **Random Selection Baseline** | 20.0% | 25.0% | 0.22 | 23.5% | 25.0% |
 
 Run the benchmark CLI directly:
 ```bash
@@ -188,7 +188,7 @@ P-006/
 │   │   ├── recommendations.py      # Actionable remediation advice engine
 │   │   └── pipeline.py             # Pipeline orchestrator & file exporter
 │   ├── tests/
-│   │   └── test_invariants.py      # Pytest automated invariant suite (15 tests)
+│   │   └── test_invariants.py      # Pytest automated invariant suite (17 tests)
 │   ├── cli.py                      # Command-line assessment tool
 │   ├── benchmark.py                # Command-line evaluation runner
 │   └── requirements.txt            # Python dependencies
@@ -269,23 +269,25 @@ pytest backend/tests/ -v
 ```
 
 ```text
-backend/tests/test_invariants.py::test_empty_dataset_graceful_handling PASSED
+backend/tests/test_invariants.py::test_csv_ingestion_and_metadata_parsing PASSED
 backend/tests/test_invariants.py::test_evaluation_benchmark_metrics PASSED
+backend/tests/test_invariants.py::test_gradient_threat_sensitivity PASSED
+backend/tests/test_invariants.py::test_invariant_4_baseline_population_alignment PASSED
+backend/tests/test_invariants.py::test_invariant_5_row_quarantine_resilience PASSED
+backend/tests/test_invariants.py::test_empty_csv_file_graceful_handling PASSED
 backend/tests/test_invariants.py::test_invariant_3_high_risk_explanation_coverage PASSED
+backend/tests/test_invariants.py::test_empty_dataset_graceful_handling PASSED
+backend/tests/test_invariants.py::test_invariant_6_reproducibility_with_seed PASSED
 backend/tests/test_invariants.py::test_invariant_1_score_bounds_and_validity PASSED
 backend/tests/test_invariants.py::test_score_sensitivity_to_threat_injection PASSED
-backend/tests/test_invariants.py::test_empty_csv_file_graceful_handling PASSED
-backend/tests/test_invariants.py::test_invariant_6_reproducibility_with_seed PASSED
-backend/tests/test_invariants.py::test_extreme_score_clamping PASSED
-backend/tests/test_invariants.py::test_csv_ingestion_and_metadata_parsing PASSED
 backend/tests/test_invariants.py::test_dynamic_window_score_shift PASSED
-backend/tests/test_invariants.py::test_invariant_4_baseline_population_alignment PASSED
-backend/tests/test_invariants.py::test_api_endpoints_integration PASSED
-backend/tests/test_invariants.py::test_recommendation_linkage_to_contributors PASSED
+backend/tests/test_invariants.py::test_benign_unusual_entity_non_threat PASSED
 backend/tests/test_invariants.py::test_invariant_2_entity_id_integrity PASSED
-backend/tests/test_invariants.py::test_invariant_5_row_quarantine_resilience PASSED
+backend/tests/test_invariants.py::test_api_endpoints_integration PASSED
+backend/tests/test_invariants.py::test_extreme_score_clamping PASSED
+backend/tests/test_invariants.py::test_recommendation_linkage_to_contributors PASSED
 
-============================== 15 passed ==============================
+============================== 17 passed in 11.19s ==============================
 ```
 
 ---
